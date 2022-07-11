@@ -1,0 +1,174 @@
+.productoH{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+.productoHR{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    justify-content: space-around;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+.productoText{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    color: #E5E5E5;
+
+    width: 30%;
+}
+.productoTitle{
+    font-family: 'Poppins Regular';
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.productoContend{
+    font-family: 'Poppins Light';
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.productoImg{
+    background: #999999;
+    border-radius: 50px;
+    width: 30%;
+    height: 300px;
+}
+.imgProduct1{
+    background-image: url(../img/servicios/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+}
+.imgProduct2{
+    background-image: url(../img/servicios/WhatsApp-Image-2021-03-02-at-09.52.31.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+}
+.imgProduct3{
+    background-image: url(../img/servicios/como-pintar-techos-sin-salpicar-pasos-620x349.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+}
+.imgProduct4{
+    background-image: url(../img/servicios/274165568_860045744788336_4703714102050422884_n.png);
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-size: 300px; 
+    filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+}
+.padding{
+    padding: 0.8rem;
+}
+.productoBtn{
+    height: 43px;
+    width: 185px;
+    background-color: #4E63C3;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1143px) {
+
+    .productoH{
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+    }
+    .productoHR{
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+    }
+    .productoText{
+        width: 40%;
+    }
+    .productoTitle{
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+    .productoContend{
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+    .imgProduct1{
+        width: 400px;
+        filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+    }
+    .productoBtn{
+        height: 33px;
+        width: 175px;
+    }
+
+}
+@media (max-width: 987px) {
+    .imgProduct1{
+        width: 300px;
+        filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+    }
+    .imgProduct2{
+        width: 300px;
+    }
+    .imgProduct3{
+        width: 300px;
+    }
+}
+@media (max-width: 618px) {
+    .productoH{
+        flex-direction: column;
+    }
+    .productoHR{
+        flex-direction: column;
+    }
+    .imgProduct1{
+        height: 300px;
+        filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
+    }
+    .imgProduct2{
+        height: 200px;
+    }
+    .imgProduct3{
+        height: 200px;
+    }
+    .imgProduct4{
+        background-size: 300px; 
+        width: 80vw;
+    }
+    .productoText{
+        margin-bottom: 2rem;
+    }
+ 
+}
+
+@media (max-width: 348px) {
+
+    .imgProduct1{
+        width: 85vw
+    }
+    .imgProduct2{
+        width: 85vw
+    }
+    .imgProduct3{
+        width: 85vw
+    }
+ 
+}

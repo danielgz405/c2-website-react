@@ -1,0 +1,317 @@
+.imgProduct{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 60%;
+    height: 100%;
+    background-color: #999999;
+
+    border-radius: 50px;
+}
+.containerImgProduct{
+    width: 40vw;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contendContact{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contendPart1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.descriptionProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40vw;
+}
+.btnProduct{
+    cursor: pointer;
+    height: 33px;
+    width: 60%;
+    background-color: #4E63C3;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.descriptionTitle{
+    margin-bottom: 0.5rem;
+    width: 60%;
+    color: rgba(229, 229, 229, 0.91);
+
+    font-family: 'Poppins Medium';
+    font-size: 26px;
+}
+.descriptionContend{
+    margin-bottom: 2.5rem;
+    width: 60%;
+    color: rgba(229, 229, 229, 0.91);
+
+    font-family: 'Poppins Light';
+    font-size: 16px;
+}
+.precioProductTitle{
+    margin-bottom: 0.5rem;
+    width: 60%;
+    color: rgba(229, 229, 229, 0.91);
+
+    font-family: 'Poppins Medium';
+    font-size: 26px;
+}
+.precioProductDescription{
+    margin-bottom: 1.5rem;
+    width: 60%;
+    color: rgba(229, 229, 229, 0.91);
+
+    font-family: 'Poppins Light';
+    font-size: 16px;
+}
+.input{
+    width: 25vmax;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+
+    color: #E5E5E5;
+    font-family: 'Poppins Regular';
+    font-size: 16px;
+}
+.mt-2{
+    margin-top: 1.5rem;
+}
+.bannerGaleriaMain{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 70vmax;
+    height: 70vh;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.btnMoveGaleria{
+    display: flex;
+    flex-direction: row;
+}
+.izq{
+    margin-right: 2.5rem;
+}
+.btns{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 100%;
+    background-color: #283138;
+    border: 3px solid #E5E5E5;
+    margin-bottom: 1.5rem;
+}
+.flecha{
+    height: 30%;
+    width: 30%;
+}
+.galeriaDinamica{
+    width: 100%;
+    height: 70vh;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    height: 70vh;
+    width: 50%;
+    overflow: hidden;
+    z-index: 3;
+}
+.imgSecundarias{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    height: 45vh;
+    z-index: 1;
+    right: 0px;
+}
+.imgItemGaleria{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-right: 1.8rem;
+    width: 11rem;
+    height: 70%;
+    border-radius: 50px;
+}
+.ContactIcon{
+    text-align: center;
+}
+.imgContact{
+    filter: brightness(100%);
+}
+.titleContact{
+    font-family: 'Poppins Semi Bold';
+    font-size: 40px;
+
+    color: rgba(229, 229, 229, 0.91);
+}
+.subtitleContact{
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+
+    color: rgba(229, 229, 229, 0.91);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.inputContact{
+    width: 25vw;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+
+    color: #E5E5E5;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+}
+.btnInputContact{
+    cursor: pointer;
+    height: 43px;
+    width: 25vw;
+    background-color: #4E63C3;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins Semi Bold';
+    font-size: 18px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    margin-top: 2rem;
+}
+.btnInputContact:active{
+    background-color: #4e63c3af;
+}
+.inputContact:active{
+    border: 0px;
+}
+.contendContact{
+    height: 500px;
+    margin-bottom: 4rem;
+}
+.alert{
+    z-index: 10;
+    left: 0px;
+    right: 0px;
+    top: 2rem;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1143px) {
+    .containerImgProduct{
+        width: 45vw;
+        height: 550px;
+    }
+    .descriptionProduct{
+        width: 50vw;
+    }
+}
+@media (max-width: 987px) {
+    .containerImgProduct{
+        width: 80vw;
+        height: 550px;
+    }
+    .descriptionProduct{
+        margin-top: 4rem;
+        width: 80vw;
+    }
+    .ContactIcon{
+        width: 70vw;
+    }
+    .contact{
+        margin-top: 3rem;
+        width: 70vw;
+    }
+    .inputContact{
+        width: 80%;
+        text-align: center;
+
+    }
+    .btnInputContact{
+        width: 80%;
+    }
+}
+@media (max-width: 618px) {
+    .containerImgProduct{
+        width: 100vw;
+        height: 450px;
+    }
+    .descriptionProduct{
+        margin-top: 4rem;
+        width: 100vw;
+    }
+    .galeriaDinamica{
+        margin: auto;
+        width: 95vw;
+        margin-bottom: 1rem;
+    }
+    .ContactIcon{
+        width: 80vw;
+    }
+    .contact{
+        margin-top: 3rem;
+        width: 80vw;
+    }
+}

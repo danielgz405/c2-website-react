@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70vmax;
+}
+
+.contendPart2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemStore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 280px;
+    height: 410px;
+    margin-bottom: 6rem;
+    margin-left: 1rem;
+}
+
+.itemStoreImg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    width: 100%;
+    height: 65%;
+    border-radius: 50px;
+}
+
+.itemStoreTitle{
+    margin-top: 1rem;
+    font-family: 'Poppins Regular';
+    font-size: 26px;
+
+    color: #E5E5E5;
+}
+
+.itemStoreDescription{
+    font-family: 'Poppins Extra Light';
+    font-size: 16px;
+
+    color: rgba(229, 229, 229, 0.91);
+}
+
+.itemStoreBtn{
+    height: 33px;
+    width: 100%;
+    background-color: #4E63C3;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
