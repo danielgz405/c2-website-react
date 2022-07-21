@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom"
-import '../../assets/css/global.css'
 import Header from "./Header";
 import Footer from "./Footer"
 
@@ -25,69 +24,24 @@ import contact from '../../assets/img/nav/Icon.png';
 
 const Layout = () => {
   const background = [
-    {
-      style : {
-        //home
-        backgroundImage: 'url("'+backgroundHome+'")',
-      },
-      current:  '/',
-    },
-    {
-      style: {
-        //servicios
-        backgroundImage: 'url("'+backgroundServices+'")',
-      },
-      current:  '/services',
-    },
-    {
-      style: {
-        //proyectos
-        backgroundImage: 'url("'+backgroundProjects+'")',
-      },
-      current: '/projects',
-    },
-    {
-      style: {
-        //about
-        backgroundImage: 'url("'+backgroundAbout+'")',
-      },
-      current: '/about',
-    },
-    {
-      style: {
-        //contact
-        backgroundImage: 'url("'+backgroundHome+'")',
-      },
-      current: '/contact',
-    },
-    {
-      style: {
-        //store
-        backgroundImage: 'url("'+backgroundStore+'")',
-      },
-      current: '/store',
-    },
-    {
-      style: {
-        //servicioIndi
-        backgroundImage: 'url("'+backgroundService+'")',
-      },
-      current: '/service',
-    },
-    {
-      style: {
-        //productos
-        backgroundImage: 'url("'+backgroundProduct+'")',
-      },
-      current: '/products',
-    },
-    {
-      style: {
-        //productos
-        backgroundImage: 'url("'+backgroundHome+'")',
-      },
-      current: '/admin',
-    }
+     //home
+    {style : {backgroundImage: 'url("'+backgroundHome+'")'}, current:  '/'},
+    //servicios
+    {style: {backgroundImage: 'url("'+backgroundServices+'")'}, current:  '/services'},
+     //proyectos
+    {style: {backgroundImage: 'url("'+backgroundProjects+'")'}, current: '/projects'},
+    //about
+    {style: {backgroundImage: 'url("'+backgroundAbout+'")'},current: '/about'},
+    //contact
+    {style: {backgroundImage: 'url("'+backgroundHome+'")'}, current: '/contact'},
+    //store
+    {style: {backgroundImage: 'url("'+backgroundStore+'")'},current: '/store'},
+    //servicioIndi
+    {style: {backgroundImage: 'url("'+backgroundService+'")'}, current: '/service'},
+    //productos
+    {style: {backgroundImage: 'url("'+backgroundProduct+'")'},current: '/products'},
+     //productos
+    {style: { backgroundImage: 'url("'+backgroundHome+'")'},current: '/admin'}
 ]
   const redes = [
     {
@@ -141,7 +95,7 @@ const Layout = () => {
   ]
   return (
     <>
-      <Header background={background} redes={redes} links={links}/>
+      <Header backgrounds={background} redes={redes} links={links}/>
       <Outlet />
       <Footer redes={redes} />
     </>

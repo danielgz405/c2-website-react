@@ -69,18 +69,6 @@
     height: 500px;
     margin-bottom: 4rem;
 }
-.alert{
-    z-index: 10;
-    left: 0px;
-    right: 0px;
-    top: 2rem;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
-}
 
 @media (max-width: 987px) {
     .ContactIcon{

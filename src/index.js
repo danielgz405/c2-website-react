@@ -1,5 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './assets/css/global.css'
+
 import Layout from "./pages/layout/Layout";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -23,11 +25,11 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="products" element={<Products />} />
-          <Route path="service" element={<Service />} />
+          <Route path="service/:id" element={<Service />} />
           <Route path="store" element={<Store />} />
           <Route path="admin" element={<Admin />} />
-          <Route path="*" element={<Error404 />} />
         </Route>
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );
