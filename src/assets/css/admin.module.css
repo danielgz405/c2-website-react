@@ -1,0 +1,154 @@
+.login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.input{
+    width: 25vw;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+
+    color: #E5E5E5;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+}
+.btnInput{
+    cursor: pointer;
+    height: 43px;
+    width: 25vw;
+    background-color: #4E63C3;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins Semi Bold';
+    font-size: 18px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    margin-top: 2rem;
+}
+.btnInput:active{
+    background-color: #4e63c3af;
+}
+.input:active{
+    border: 0px;
+}
+.alert{
+    z-index: 10;
+    left: 0px;
+    right: 0px;
+    top: 2rem;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+/*ERROR */
+.errorContainer{
+    background-image: url('../img/photo-1545972154-9bb223aac798.avif');
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+.messageContainer{
+    max-width: 80rem; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+}
+.textError{
+    font-size: 16px;
+    color: #323840;
+    font-family: Poppins Regular;
+    text-transform: uppercase;
+}
+.textErrorPri{
+    margin-top: 1rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-family: Poppins Semi Bold;
+    color: #f1f5f9;
+}
+.textDesc{
+    margin-top: 1rem;
+    font-size: 16px;
+    color: #323840;
+    font-family: Poppins Regular;
+}
+.mt3{
+    margin-top: 3rem;
+}
+.buttomError{
+    border-radius: 0.375rem;
+    opacity: 0.7;
+    background: #f9fafb;
+    color: #000;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    text-decoration: none;
+    font-family: Poppins Regular;
+}
+.buttomError:hover{
+    opacity: 0.9;
+}
+
+@media (max-width: 987px) {
+    .input{
+        width: 80%;
+        text-align: center;
+
+    }
+    .btnInput{
+        width: 80%;
+    }
+}
+
+@media (max-width: 739px) {
+    .errorContainer{
+        background-position: top;
+    }
+    .messageContainer{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .textErrorPri{
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+@media (max-width: 514px) {
+
+    .messageContainer{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+ 
+}

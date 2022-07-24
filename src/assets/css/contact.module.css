@@ -4,6 +4,9 @@
     align-items:center;
     justify-content: space-around;
     flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 4rem;
+    padding: 2rem;
 }
 .ContactIcon{
     text-align: center;
@@ -64,10 +67,6 @@
 }
 .input:active{
     border: 0px;
-}
-.contendPart1{
-    height: 500px;
-    margin-bottom: 4rem;
 }
 
 @media (max-width: 987px) {

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { useLocation, useParams } from "react-router-dom"
+import { Link as Scroll } from 'react-scroll'
+import { useLocation, useParams } from "react-router-dom";
 
 //images
-import backgroundDefault from '../../assets/img/proyectos/banner.jpg';
+import backgroundDefault from '../assets/img/proyectos/banner.jpg';
 
 //icons
-import c2 from '../../assets/img/Header/c2.png';
+import c2 from '../assets/img/Header/c2.png';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
@@ -63,18 +64,27 @@ export default function Header({backgrounds, redes, links}){
               {links.map((item) => (
                 item.title === 'Localizacion' ?
                 (<div key={item.title}>
-                    <a className="Item" href={item.to}>
+                    {router === '/' ?
+                    <Scroll className="Item" to={item.to} spy={true} smooth={true} offset={0} duration={500} >
                         <div className={classNames('itemC')}>
-                            <img className="imgItem" src={item.src} alt=""/>
+                            <item.icon className="imgItem" />
+                            <h1 className="nav_text">{item.title}</h1>
+                        </div>
+                    </Scroll>
+                    :
+                    <a className="Item" href="/">
+                        <div className={classNames('itemC')}>
+                            <item.icon className="imgItem" />
                             <h1 className="nav_text">{item.title}</h1>
                         </div>
                     </a>
+                    }
                 </div>)
                 :
                 (<div key={item.title}>
                     <Link className="Item" to={item.to}>
-                        <div className={classNames(item.current && 'borderBotNav','itemC')}>
-                            <img className="imgItem" src={item.src} alt=""/>
+                        <div className={classNames(item.current && item.title !== 'Localizacion' && 'borderBotNav','itemC')}>
+                            <item.icon className="imgItem" />
                             <h1 className="nav_text">{item.title}</h1>
                         </div>
                     </Link>

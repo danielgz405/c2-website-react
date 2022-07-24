@@ -1,11 +1,11 @@
 import React, {useState, useRef} from "react";
 import emailjs from '@emailjs/browser';
 import { useParams } from "react-router-dom";
-import Galery from "./components/Galery";
+import Galery from "../common/Galery";
 import styleService from "../assets/css/serviciosIndi.module.css";
 import styleContact from '../assets/css/contact.module.css';
-import useAlert from './hooks/useAlert';
-import Alert from './components/Alert';
+import useAlert from '../hooks/useAlert';
+import Alert from '../common/Alert';
 
 //IMAGES
 import c2 from '../assets/img/Header/c2.png';
@@ -64,11 +64,11 @@ export default function Service() {
       price: "120.000 COP", 
       image: {backgroundImage: 'url('+imageFacility+')'},
       galeryImages: [
-        {img: {backgroundImage:  'url('+galery1+')'}},
-        {img: {backgroundImage:  'url('+galery2+')'}},
-        {img: {backgroundImage:  'url('+galery3+')'}}
+        defaultImage,
+        galery1,
+        galery2,
+        galery3,
       ],
-      galeryDefault: {backgroundImage:  'url('+defaultImage+')'},
     },
     {
       id: '1',
@@ -78,11 +78,11 @@ export default function Service() {
       price: "120.000 COP", 
       image: {backgroundImage: 'url('+imagePaint+')'},
       galeryImages: [
-        {img: {backgroundImage:  'url('+galery1+')'}},
-        {img: {backgroundImage:  'url('+galery2+')'}},
-        {img: {backgroundImage:  'url('+galery3+')'}}
+        defaultImage,
+        galery1,
+        galery2,
+        galery3,
       ],
-      galeryDefault: {backgroundImage:  'url('+defaultImage+')'},
     },
     {
       id: '2',
@@ -92,11 +92,11 @@ export default function Service() {
       price: "120.000 COP", 
       image: {backgroundImage: 'url('+imageFurniture+')'},
       galeryImages: [
-        {img: {backgroundImage:  'url('+galery1+')'}},
-        {img: {backgroundImage:  'url('+galery2+')'}},
-        {img: {backgroundImage:  'url('+galery3+')'}}
+        defaultImage,
+        galery1,
+        galery2,
+        galery3,
       ],
-      galeryDefault: {backgroundImage:  'url('+defaultImage+')'},
     }
   ];
   return(
@@ -130,9 +130,9 @@ export default function Service() {
 
                         <label className="labelPrin">Detalles del servicio</label>
 
-                        <div className={"label" }> {'Nombre del servicio: '+item.name} </div><br/>
-                        <div className="label" > {item.serviceDescription.length < 45 ? 'Descripcion: '+ item.serviceDescription : 'Descripcion: '+ item.serviceDescription.substr(0, 35) + '...' } </div><br/>
-                        <div className="label" > {'Precio: '+item.price}</div><br/>
+                        <div className="label"><span className="textBold">Nombre del servicio: </span> {item.name} </div>
+                        <div className="label"><span className="textBold">Descripcion: </span> {item.serviceDescription.length < 45 ? item.serviceDescription : item.serviceDescription.substr(0, 35) + '...' } </div>
+                        <div className="label"><span className="textBold">Precio: </span> {item.price}</div>
                     </form>
                   ))}
                 </div>
@@ -161,7 +161,7 @@ export default function Service() {
                       <div onClick={() => setOpen(true)} className={styleService.btnProduct}>Adquirir</div>
                   </div>
               </div>
-              <Galery name="Galery" defaultImage={item.galeryDefault} images={item.galeryImages} styleService={styleService} />
+              <Galery name="Galery" images={item.galeryImages} styleService={styleService} />
             </div>
           ))}
         </div>

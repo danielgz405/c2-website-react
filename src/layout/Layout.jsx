@@ -1,26 +1,21 @@
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom"
+import { LocationMarkerIcon, TagIcon, PhotographIcon, UsersIcon, AnnotationIcon } from '@heroicons/react/outline';
 import Header from "./Header";
 import Footer from "./Footer"
 
 //images
-import backgroundHome from '../../assets/img/Home/banner.jpg';
-import backgroundServices from '../../assets/img/servicios/banner.jpg';
-import backgroundProjects from '../../assets/img/proyectos/banner.jpg';
-import backgroundAbout from '../../assets/img/proyectos/banner.jpg';
-import backgroundStore from '../../assets/img/proyectos/banner.jpg';
-import backgroundService from '../../assets/img/proyectos/banner.jpg';
-import backgroundProduct from '../../assets/img/proyectos/banner.jpg';
+import backgroundHome from '../assets/img/Home/banner.jpg';
+import backgroundServices from '../assets/img/servicios/banner.jpg';
+import backgroundProjects from '../assets/img/proyectos/banner.jpg';
+import backgroundAbout from '../assets/img/proyectos/banner.jpg';
+import backgroundStore from '../assets/img/proyectos/banner.jpg';
+import backgroundService from '../assets/img/proyectos/banner.jpg';
+import backgroundProduct from '../assets/img/proyectos/banner.jpg';
 //redes
-import whatsapp from '../../assets/img/Header/nav/whatsapp.png';
-import facebook from '../../assets/img/Header/nav/facebook.png';
-import instagram from '../../assets/img/Header/nav/instagram.png';
-//icons
-import home from '../../assets/img/nav/location.png';
-import services from '../../assets/img/nav/document.png';
-import projects from '../../assets/img/nav/image.png';
-import about from '../../assets/img/nav/users.png';
-import contact from '../../assets/img/nav/Icon.png';
+import whatsapp from '../assets/img/Header/nav/whatsapp.png';
+import facebook from '../assets/img/Header/nav/facebook.png';
+import instagram from '../assets/img/Header/nav/instagram.png';
 
 const Layout = () => {
   const background = [
@@ -63,33 +58,34 @@ const Layout = () => {
 
   const links = [
     {
-      to: '/#location',
+      to: 'location',
+      herf: '/',
       current: useLocation().pathname === '/',
-      src: home,
+      icon: LocationMarkerIcon,
       title: 'Localizacion',
     },
     {
       to: '/services',
       current: useLocation().pathname === '/services',
-      src: services,
+      icon: TagIcon,
       title: 'Servicios',
     },
     {
       to: '/projects',
       current: useLocation().pathname === '/projects',
-      src: projects,
+      icon: PhotographIcon,
       title: 'Proyectos',
     },
     {
       to: '/about',
       current: useLocation().pathname === '/about',
-      src: about,
+      icon: UsersIcon,
       title: 'Nosotros',
     },
     {
       to: '/contact',
       current: useLocation().pathname === '/contact',
-      src: contact,
+      icon: AnnotationIcon,
       title: 'Contacto',
     }
   ]

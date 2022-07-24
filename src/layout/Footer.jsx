@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 //icons
-import c2 from '../../assets/img/Header/c2.png';
+import c2 from '../assets/img/Header/c2.png';
 
 export default function Footer({redes}){
     const links = [

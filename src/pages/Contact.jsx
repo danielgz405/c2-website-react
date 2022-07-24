@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styleContact from '../assets/css/contact.module.css';
-import useAlert from './hooks/useAlert';
-import Alert from './components/Alert';
+import useAlert from '../hooks/useAlert';
+import Alert from '../common/Alert';
 
 //images
 import c2 from '../assets/img/Header/c2.png';
