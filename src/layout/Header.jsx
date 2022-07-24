@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Link as Scroll } from 'react-scroll'
 import { useLocation, useParams } from "react-router-dom";
+import { HomeIcon } from '@heroicons/react/outline';
 
 //images
 import backgroundDefault from '../assets/img/proyectos/banner.jpg';
@@ -72,12 +73,12 @@ export default function Header({backgrounds, redes, links}){
                         </div>
                     </Scroll>
                     :
-                    <a className="Item" href="/">
+                    <Link className="Item" to="/">
                         <div className={classNames('itemC')}>
-                            <item.icon className="imgItem" />
-                            <h1 className="nav_text">{item.title}</h1>
+                            <HomeIcon className="imgItem" />
+                            <h1 className="nav_text">Home</h1>
                         </div>
-                    </a>
+                    </Link>
                     }
                 </div>)
                 :
