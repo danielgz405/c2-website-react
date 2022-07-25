@@ -29,7 +29,7 @@ export default function Porfile({setEdit, edit, user}){
                             <dd className="input-form " >{user.reloadUserInfo.initialEmail}</dd>
                         </div>
                         <div className="table">
-                            <dt className="title-table mt-01">Ultima Fecha de coneccion: </dt>
+                            <dt className="title-table mt-01">Ultima Fecha de conexion: </dt>
                             <dd className="input-form mt-01" >{user.metadata.lastSignInTime}</dd>
                         </div>
                         <div className="table">
