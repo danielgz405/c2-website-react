@@ -12,11 +12,19 @@ export default function Login({styleAdmin, setAlert}){
       email: formData.get('email'),
       password: formData.get('password'),
     };
+    let name = '';
+    const userName = Array.from(data.email).map((item) => {
+      if(item === '@'){
+        return name;
+      }
+      name = name + item;
+      return '';
+    });
     authLogin(data.email, data.password)
       .then(() => {
         setAlert({
           active: true,
-          message: 'welcome',
+          message: 'welcome '+ userName.filter((item) => (item !== '')),
           autoClose: true,
           type: 'success',
         });
@@ -24,7 +32,7 @@ export default function Login({styleAdmin, setAlert}){
       .catch(() => {
         setAlert({
           active: true,
-          message: 'error',
+          message: 'Uh oh! your credentials are wrong.',
           autoClose: true,
           type: 'error',
         });

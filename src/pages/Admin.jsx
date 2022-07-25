@@ -23,7 +23,7 @@ export default function Admin(){
   return (
     <>
       <Alert alert={alert} handleClose={toggleAlert}/>
-      {user ? <HomeAdmin user={user} /> : <Login setAlert={setAlert} styleAdmin={styleAdmin} />}
+      {user ? <HomeAdmin setAlert={setAlert} user={user} /> : <Login setAlert={setAlert} styleAdmin={styleAdmin} />}
     </>
   );
 };

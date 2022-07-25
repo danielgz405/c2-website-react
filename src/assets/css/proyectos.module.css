@@ -5,6 +5,7 @@
     justify-content: center;
 }
 .galeriaImgContainer{
+    margin-top: 20px;
     height: 360px;
     width: 1238px;
     display: grid;

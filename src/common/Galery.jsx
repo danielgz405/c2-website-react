@@ -15,14 +15,14 @@ export default function Galery({name, images, styleService}){
     }))
     const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
         if (active && Math.abs(mx) > width / 2) {
-        index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, images.length - 1)
-        cancel()
+            index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, images.length - 1)
+            cancel()
         }
         api.start(i => {
-        if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
-        const x = (i - index.current) * width + (active ? mx : 0)
-        const scale = active ? 1 - Math.abs(mx) / width / 2 : 1
-        return { x, scale, display: 'block' }
+            if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
+            const x = (i - index.current) * width + (active ? mx : 0)
+            const scale = active ? 1 - Math.abs(mx) / width / 2 : 1
+            return { x, scale, display: 'block' }
         })
     })
     return (  

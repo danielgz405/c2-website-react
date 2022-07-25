@@ -387,6 +387,229 @@ a.list{
     font-weight: 1000;
     color: rgba(211, 209, 209, 0.91);
 }
+.col-span-3 {
+    grid-column: span 1 / span 2;
+}
+.sub-navigation{
+    border-right: 0.01rem solid #5b5b5d;
+}
+.p-2 {
+    padding: 0.5rem/* 8px */;
+}
+
+.subnavigationButtom{
+    background-color: #999999;
+    border: #999999;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    border-radius: 0rem 0.375rem 0.375rem 0rem;
+    font-family: 'Poppins Regular';
+    cursor: pointer;
+    width: 100%;
+}
+.text-color-pri {
+    color: #4E63C3;
+}
+.bg-pri-hover:hover{
+    background-color: rgba(229, 229, 229, 0.91);
+}
+.border-subnavigation-pri{
+    border-left: 0.2rem solid #4E63C3;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.text-color-seco {
+    color: rgb(75 85 99);
+}
+.mr-4 {
+    margin-right: 1rem;
+}
+.subnavigationIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.homeContainer{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #999999;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+}
+
+.header-section{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+.title-secction{
+    font-family: 'Poppins Semi Bold';
+    font-size: 35px;
+
+    color: rgba(41, 49, 57);
+}
+.description-secction{
+    font-family: 'Poppins Regular';
+    font-size: 15px;
+
+    color: rgba(41, 49, 57);
+}
+.contend-section{
+    display: grid;
+    grid-template: 1fr / 4fr 1fr;
+}
+.porfile-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.title-form{
+    margin-bottom: 0.2rem;
+    font-family: 'Poppins Regular';
+    font-size: 17px;
+
+    color: rgba(41, 49, 57);
+}
+.input-form{
+    font-family: 'Poppins Regular';
+    font-size: 17px;
+    height: 35px;
+    padding-left: 0.5rem;
+
+    color: rgba(41, 49, 57);
+}
+.disabled{
+    cursor:no-drop;
+}
+.image-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+.container-section{
+    position: relative;
+    height: 100%;
+}
+.ml-1{
+    margin-left: 1rem;
+}
+.mt-01{
+    margin-top: 0.5rem;
+}
+.basic-buttom{
+    height: 43px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #4E63C3;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basic-buttom:hover{
+    background-color:#697AC8;
+}
+.delete-buttom{
+    height: 43px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #697AC8;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-buttom:hover{
+    background-color:#981d1d;
+}
+.submit-form{
+    cursor: pointer;
+    height: 43px;
+    background-color: #4E63C3;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins Semi Bold';
+    font-size: 18px;
+    box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    margin-top: 2rem;
+}
+.submit-form:hover{
+    background-color:#697AC8;
+}
+.photoEdit:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.table{
+    display: flex;
+    flex-direction: row;
+}
+.title-table{
+    margin-bottom: 0.2rem;
+    font-family: 'Poppins Semi Bold';
+    font-size: 17px;
+
+    color: rgba(41, 49, 57);
+}
+.container-table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ml-4{
+    margin-left: 1rem;
+}
+.editElement{
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.editElement:hover{
+    background-color:#cacaca;
+}
 
 @media (max-width: 1143px) {
     .nav_text{
