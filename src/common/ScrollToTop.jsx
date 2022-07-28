@@ -5,8 +5,11 @@ import { useLocation } from "react-router";
 const ScrollToTop = (props) => {
     const location = useLocation();
     useEffect(() => {
-        console.log(location);
-      window.scrollTo(0, 0);
+      if (location.pathname !== "/") {
+        window.scrollTo(0, 500);
+      }else{
+        window.scrollTo(0, 0);
+      }
     }, [location]);
   
     return <>{props.children}</>

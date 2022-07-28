@@ -38,7 +38,7 @@ export default function HomeAdmin({user, setAlert}){
         <div className="">
           {
             {
-              Perfil: edit ? <PorfileEdit setAlert={setAlert} setEdit={setEdit} edit={edit} user={user} /> : <Porfile setEdit={setEdit} edit={edit} user={user} />,
+              Perfil: edit ? <PorfileEdit setAlert={setAlert} setEdit={setEdit} edit={edit} user={user} /> : <Porfile setEdit={setEdit} edit={edit} user={user} setAlert={setAlert} />,
               Usuarios: edit ? <UsersEdit /> : <Users setEdit={setEdit} />,
               Store: edit ? <StoreEdit /> : <Store setEdit={setEdit} />,
               Home: edit ? <HomeEdit /> : <Home setEdit={setEdit} />,

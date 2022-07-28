@@ -536,6 +536,8 @@ a.list{
     font-size: 14px;
     box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    text-decoration: none;
+    border: 0px;
     
     display: flex;
     justify-content: center;
@@ -555,6 +557,8 @@ a.list{
     font-size: 14px;
     box-shadow: 10px 10px 50px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    text-decoration: none;
+    border: 0px;
     
     display: flex;
     justify-content: center;
@@ -604,11 +608,74 @@ a.list{
     margin-left: 1rem;
 }
 .editElement{
+    padding-left: 0.5rem;
     cursor: pointer;
     border-radius: 0.2rem;
 }
 .editElement:hover{
     background-color:#cacaca;
+}
+.modal-fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background-color: #124f623d;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.close{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.close:hover{
+    color: #981d1d;
+}
+.body::-webkit-scrollbar {
+    display: none;
+}
+.modal{
+    max-height: 95vh;
+    width: 70vw;
+    background-color: #999999;
+    border-radius: 1rem;
+}
+.modal-header{
+    background-color: rgba(41, 49, 57);
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #cacaca;
+    font-family: 'Poppins Semi Bold';
+    font-size: 15px;
+    Overflow: overlay
+}
+.contend-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+.modal-contend{
+    margin: 0.4rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 0.2rem 0.2rem 1rem 1rem;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 1143px) {

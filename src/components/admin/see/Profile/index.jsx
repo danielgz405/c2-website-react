@@ -1,5 +1,29 @@
-export default function Porfile({setEdit, edit, user}){
+import { getAuth, signOut } from "firebase/auth";
+
+const auth = getAuth();
+
+export default function Porfile({setEdit, edit, user, setAlert}){
     console.log(user);
+
+    const logout = (event) => {
+        event.preventDefault();
+
+        signOut(auth).then(() => {
+            setAlert({
+                active: true,
+                message: 'Se ha cerrado sesion exitosamente',
+                autoClose: true,
+                type: 'success',
+            });
+        }).catch((error) => {
+            setAlert({
+                active: true,
+                message: 'Ha ocurrido un error',
+                autoClose: true,
+                type: 'error',
+            });
+        });
+        }
     return (
       <>
         <div className="container-section">
@@ -44,7 +68,7 @@ export default function Porfile({setEdit, edit, user}){
             </div>
             <div className="footer-section">
                 <div className="basic-buttom" onClick={() => setEdit(!edit)}>Editar</div>
-                <div className="delete-buttom ml-1">Eliminar</div>
+                <div className="delete-buttom ml-1" onClick={(e) => logout(e)}>Cerrar Sesion</div>
             </div>
         </div>
       </>
