@@ -48,6 +48,7 @@ export default function Items({product}){
                         </div>
                     </dl>
                 </div>
+                <label className="title-table mt-01">Galeria</label>
                 {product.images.length > 0 && 
                       <table>
                         <thead>
@@ -62,7 +63,7 @@ export default function Items({product}){
                             <tr>
                               <td className="table-galery text-secondarie"><p>{item.alt}</p></td>
                               <td className="table-galery">
-                                <div className="rounded_full x7 bg_images py-auto" style={{backgroundImage: `url(${item.url})`}} ></div>
+                                <div className="rounded_full x5 bg_images py-auto" style={{backgroundImage: `url(${item.url})`}} ></div>
                               </td>
                             </tr>
                           </tbody>
