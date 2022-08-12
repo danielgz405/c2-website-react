@@ -22,7 +22,6 @@ export default function Header({backgrounds, redes, links}){
         <div className="header">
         {params === undefined ?
             (backgrounds.filter((item) => (item.current === router)).map((background, index) => {
-                console.log(index);
                 return(
                 <div key={background.current} className="banner" style={ background.style }>
                     <div className="bannerTx">

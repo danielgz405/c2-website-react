@@ -1,9 +1,14 @@
 import { getAuth, signOut } from "firebase/auth";
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 const auth = getAuth();
 
+const formatDate = (date) => {
+    return format(new Date(date), 'eee dd/MM/yyyy  h:m b', { locale: es });
+  };
+
 export default function Porfile({setEdit, edit, user, setAlert}){
-    console.log(user);
 
     const logout = (event) => {
         event.preventDefault();
@@ -54,11 +59,11 @@ export default function Porfile({setEdit, edit, user, setAlert}){
                         </div>
                         <div className="table">
                             <dt className="title-table mt-01">Ultima Fecha de conexion: </dt>
-                            <dd className="input-form mt-01" >{user.metadata.lastSignInTime}</dd>
+                            <dd className="input-form mt-01" >{formatDate(user.metadata.lastSignInTime)}</dd>
                         </div>
                         <div className="table">
                             <dt className="title-table mt-01">Fecha de creacion: </dt>
-                            <dd className="input-form mt-01" >{user.metadata.creationTime}</dd>
+                            <dd className="input-form mt-01" >{formatDate(user.metadata.creationTime)}</dd>
                         </div>
                     </dl>
                 </div>

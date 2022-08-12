@@ -32,7 +32,6 @@ export default function Contact(){
             type: 'success',
           });
       }, (error) => {
-        console.log(error);
         setAlert({
             active: true,
             message: 'Message could not be sent',

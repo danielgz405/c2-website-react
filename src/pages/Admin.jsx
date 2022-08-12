@@ -1,4 +1,4 @@
-import {getAuth, onAuthStateChanged} from 'firebase/auth';
+import {getAuth, onAuthStateChanged, signOut} from 'firebase/auth';
 import { app } from '../credentials';
 import { useState } from 'react';
 import styleAdmin from '../assets/css/admin.module.css'
@@ -23,7 +23,7 @@ export default function Admin(){
   return (
     <>
       <Alert alert={alert} handleClose={toggleAlert}/>
-      {user ? <HomeAdmin setAlert={setAlert} user={user} /> : <Login setAlert={setAlert} styleAdmin={styleAdmin} />}
+      {user ? <HomeAdmin setAlert={setAlert} user={user} auth={auth} signOut={signOut} /> : <Login setAlert={setAlert} styleAdmin={styleAdmin} />}
     </>
   );
 };

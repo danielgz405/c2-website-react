@@ -44,7 +44,6 @@ export default function Service() {
             type: 'success',
           });
       }, (error) => {
-        console.log(error);
         setAlert({
             active: true,
             message: 'Message could not be sent',
@@ -54,7 +53,6 @@ export default function Service() {
       });
   }
 
-  console.log(params.id)
   const service = [
     {
       id: '0',
