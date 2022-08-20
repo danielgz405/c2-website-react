@@ -4,10 +4,14 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import styleStore from '../assets/css/store.module.css'
 import { InformationCircleIcon } from "@heroicons/react/solid";
 import { app } from "../credentials";
+import Alert from "../common/Alert";
+import useAlert from "../hooks/useAlert";
 
 const db = getFirestore(app);
 
 export default function Store(){
+  // eslint-disable-next-line no-unused-vars
+  const { alert, setAlert, toggleAlert } = useAlert();
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getProduct = async() => {
@@ -22,8 +26,10 @@ export default function Store(){
       }
     }
     getProduct();
-  });
+  }, [alert]);
     return (
+      <>
+      <Alert alert={alert} handleClose={toggleAlert}/>
       <div className={styleStore.contendPart2}>
         <div className={styleStore.container}>
           {products.length > 0 ? 
@@ -48,5 +54,6 @@ export default function Store(){
           }
         </div>
     </div>
+    </>
     );
 };

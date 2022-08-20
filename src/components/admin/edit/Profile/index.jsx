@@ -55,6 +55,7 @@ export default function Porfile({setEdit, edit, user, setAlert}){
       auth.currentUser.email,
       data.oldPassword
     )
+    // eslint-disable-next-line no-unused-vars
     const result = reauthenticateWithCredential(
         auth.currentUser, 
         credential
@@ -134,6 +135,7 @@ export default function Porfile({setEdit, edit, user, setAlert}){
       auth.currentUser.email,
       data.oldPassword
     )
+    // eslint-disable-next-line no-unused-vars
     const result = reauthenticateWithCredential(
         auth.currentUser, 
         credential
