@@ -121,9 +121,9 @@ export default function Service() {
                         <input required type="text" className={styleContact.input} name="name" id="name" placeholder="Nombre"/>
                         <input required type="number" className={styleContact.input} name="phone" id="phone" placeholder="Telefono"/><br/>
                         <textarea required name="message" id="message" className={styleContact.input} placeholder="Mensaje"></textarea>
-                        <input required style={{display: 'none'}} name="service_name" id="service_name" value={item.name}/>
-                        <input required style={{display: 'none'}} name="service_description" id="service_description" value={item.serviceDescription} />
-                        <input required style={{display: 'none'}} name="service_price" id="service_price" value={item.price} /><br/>
+                        <input required style={{display: 'none'}} name="service_name" id="service_name" value={item.name} onChange={()=>{}}/>
+                        <input required style={{display: 'none'}} name="service_description" id="service_description" value={item.serviceDescription} onChange={()=>{}} />
+                        <input required style={{display: 'none'}} name="service_price" id="service_price" value={item.price} onChange={()=>{}} /><br/>
                         <input type="submit" className={styleContact.btnInput} value="Send" id="boton"/>
 
                         <label className="labelPrin">Detalles del servicio</label>

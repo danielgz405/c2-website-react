@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { useState, useRef, useEffect } from "react";
-import { getFirestore, collection, getDocs, doc, deleteDocs } from "firebase/firestore";
+import { InformationCircleIcon } from "@heroicons/react/outline";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { app } from '../../../../credentials';
+import Items from "./Item";
 
 const db = getFirestore(app);
 
@@ -36,7 +38,6 @@ export default function Store({setEdit, edit, signOut, setAlert, auth}){
         });
         setProducts(listProduct)
       } catch (error) {
-        console.log(error);
       }
     }
     getProduct();
@@ -51,12 +52,23 @@ export default function Store({setEdit, edit, signOut, setAlert, auth}){
           <div className="contend-section-1row">
             <div>
               <ul>
-                {products.map((item) => (
-                  <Items product={item} />
-                ))}
+                {products.length > 0 ?
+                  (products.map((item) => (
+                    <Items key={item.id} productsBd={item} setAlert={setAlert} />
+                  )))
+                  :
+                  <>
+                    <div
+                    type="button"
+                    className="commingSon-min"
+                    >
+                      <InformationCircleIcon className="commingSonIcon"/>
+                      <span className="commingSonText">Aun no se han registrado productos </span>
+                    </div>
+                  </>
+                }
               </ul>
             </div>
-            <div className="basic-buttom" onClick={() => setOpen(!open)}>Crear Un nuevo item</div>
           </div>
           <div className="footer-section">
               <div className="basic-buttom" onClick={() => setEdit(!edit)}>Cancelar</div>

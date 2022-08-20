@@ -232,9 +232,9 @@ export default function Porfile({setEdit, edit, user, setAlert}){
                   <label className="title-table ml-1" >Contraseña actual</label>
                   <input className="input-form" required autoComplete="password" type="password" name="oldPpassword" id="oldPpassword" placeholder="Ingresa el password actual" />
                   <label className="title-table ml-1 mt-01" >Nueva contraseña</label>
-                  <input className="input-form" required type="password" minlength="8" name="password" id="password" placeholder="Ingresa el nuevo password" />
+                  <input className="input-form" required type="password" minLength={8} name="password" id="password" placeholder="Ingresa el nuevo password" />
                   <label className="title-table ml-1 mt-01" >Confirmar la contraseña</label>
-                  <input className="input-form" required type="password" minlength="8" name="comfirmPassword" id="comfirmPassword" placeholder="Ingresa el password otra vez"/>
+                  <input className="input-form" required type="password" minLength={8} name="comfirmPassword" id="comfirmPassword" placeholder="Ingresa el password otra vez"/>
                 </div>
                 <div className="image-form">
                   <img className="photo" src={ user.photoURL ? user.photoURL : `https://ui-avatars.com/api/?name=${user.displayName ? user.displayName : 'Undefine'}&size=128&rounded=true&background=4E63C3&color=fff&bold=true`} alt=""></img>

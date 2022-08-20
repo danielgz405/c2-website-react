@@ -2,7 +2,6 @@ import { useState } from "react";
 import Modal from "../../../../common/Modal";
 
 export default function Items({product}){
-  console.log(product);
   const [open, setOpen] = useState(false);
     return (
       <>
@@ -13,7 +12,7 @@ export default function Items({product}){
             </div>
             <div className="contend-table-col">
               <p className="text-primarie">{product.title}</p>
-              <p className="text-secondarie">{'@' + product.value}</p>
+              <p className="text-secondarie">{'$' + product.value}</p>
             </div>
             <div className="contend-table-col align-items-end">
               <div
@@ -48,28 +47,56 @@ export default function Items({product}){
                         </div>
                     </dl>
                 </div>
-                <label className="title-table mt-01">Galeria</label>
-                {product.images.length > 0 && 
-                      <table>
-                        <thead>
-                          <tr>
-                            <th><label className="title-table ml-1">alt</label></th>
-                            <th><label className="title-table ml-1">image</label></th>
-                          </tr>
-                        </thead>
-                        
-                        {product.images.map((item, index) => (
-                          <tbody key={index}>
+                <br/>
+                {product.images.length > 0 && <label className="title-table mt-1 ml-1">Galeria: </label> }
+                <div className="container-table mt-1 ml-1">
+                  {product.images.length > 0 && 
+                        <table>
+                          <thead>
                             <tr>
-                              <td className="table-galery text-secondarie"><p>{item.alt}</p></td>
-                              <td className="table-galery">
-                                <div className="rounded_full x5 bg_images py-auto" style={{backgroundImage: `url(${item.url})`}} ></div>
-                              </td>
+                              <th><label className="title-table ml-1">alt</label></th>
+                              <th><label className="title-table ml-1">image</label></th>
                             </tr>
-                          </tbody>
-                        ))}
-                      </table>
-                  }
+                          </thead>
+                          
+                          {product.images.map((item, index) => (
+                            <tbody key={index}>
+                              <tr>
+                                <td className="table-galery text-secondarie"><p>{item.alt}</p></td>
+                                <td className="table-galery">
+                                  <div className="rounded_full x5 bg_images py-auto" style={{backgroundImage: `url(${item.url})`}} ></div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          ))}
+                        </table>
+                    }
+                </div>
+                <br/>
+                {product.accesories?.length > 0 && <label className="title-table mt-01 ml-1">Accesorios: </label>}
+                <div className="container-table mt-1 ml-1">
+                {product.accesories?.length > 0 && 
+                        <table>
+                          <thead>
+                            <tr>
+                              <th><label className="title-table ml-1">Name</label></th>
+                              <th><label className="title-table ml-1">Image</label></th>
+                            </tr>
+                          </thead>
+                          
+                          {product.accesories?.map((item, index) => (
+                            <tbody key={index}>
+                              <tr>
+                                <td className="table-galery text-secondarie"><p>{item.title}</p></td>
+                                <td className="table-galery">
+                                  <div className="rounded_full x7 bg_images py-auto" style={{backgroundImage: `url(${item.url})`}} ></div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          ))}
+                        </table>
+                      }
+                </div>
                 </div>
                 <div className="image-form">
                   <div className="rounded_full x7 bg_images py-auto" style={{backgroundImage: `url(${product.url})`}}></div>

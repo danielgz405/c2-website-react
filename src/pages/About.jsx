@@ -41,8 +41,8 @@ export default function About() {
                         <h1 className="titlePart">Nuestro Equipo</h1>
                     </div>
                     <div className={styleAbout.contendPart2}>
-                        {personal.map((item)=>(
-                            <div className={styleAbout[item.class]}>
+                        {personal.map((item, idx)=>(
+                            <div key={idx} className={styleAbout[item.class]}>
                                 <div className={styleAbout.productoText}>
                                     <h3 className={styleAbout.productoTitle}>{item.name}</h3>
                                     <p className={styleAbout.productoContend}>
