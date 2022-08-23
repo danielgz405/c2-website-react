@@ -27,7 +27,7 @@ export default function Contact(){
       .then((result) => {
         setAlert({
             active: true,
-            message: 'Message has been sent',
+            message: 'El Mensaje se ha enviado, En unos dias recibirá un respuesta',
             autoClose: true,
             type: 'success',
           });

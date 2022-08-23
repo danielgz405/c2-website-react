@@ -19,7 +19,7 @@ export default function Contact({styleContact, c2, product, setAlert, meters, se
     emailjs.sendForm(EMAIL, TEMPLATE2, formRef.current, USER).then((result) => {
         setAlert({
             active: true,
-            message: 'Message has been sent',
+            message: 'El Mensaje se ha enviado, En unos dias recibirá un respuesta',
             autoClose: true,
             type: 'success',
           });
@@ -55,7 +55,7 @@ export default function Contact({styleContact, c2, product, setAlert, meters, se
                       }
                       <input required type="email" className={styleContact.input} name="email" id="email" placeholder="Correo Electronico"/>
                       <input required type="text" className={styleContact.input} name="name" id="name" placeholder="Nombre"/>
-                      <input required type="number" className={styleContact.input} name="phone" id="phone" placeholder="Telefono"/><br/>
+                      <input required type="number" className={styleContact.input} name="phone" id="phone" placeholder="Telefono"/>
                       <textarea required name="message" id="message" className={styleContact.input} placeholder="Mensaje"></textarea>
 
                       {// contend del Producto
@@ -63,7 +63,7 @@ export default function Contact({styleContact, c2, product, setAlert, meters, se
                       {selectAccesorie.length > 0 && 
                       <>
                         {selectAccesorie.map((item, indx) => (
-                            <><input required style={{display: 'none'}} name={`product_accesorie${indx}`} id={`product_accesorie${indx}`} value={`https://cyc-acabados-arquitectonicos.web.app/products/${item.id}`} onChange={()=>{}}/><br/></>
+                            <><input required style={{display: 'none'}} name={`product_accesorie${indx}`} id={`product_accesorie${indx}`} value={`https://cyc-acabados-arquitectonicos.web.app/products/${item.id}`} onChange={()=>{}}/></>
                         ))}
                       </>
                       }
@@ -71,41 +71,41 @@ export default function Contact({styleContact, c2, product, setAlert, meters, se
                       <input required style={{display: 'none'}} name="product_description" id="product_description" value={product.description} onChange={()=>{}} /><br/>
                       <input required style={{display: 'none'}} name="product_price" id="product_price" value={product.value} onChange={()=>{}} /><br/>
                       
-                      <input required style={{display: 'none'}} name="product_boxes" id="product_boxes" value={meters.boxes} onChange={()=>{}} /><br/>
-                      <input required style={{display: 'none'}} name="product_meters" id="product_meters" value={meters.meters} onChange={()=>{}} /><br/>
+                      {product.metersByBox && <><input required style={{display: 'none'}} name="product_boxes" id="product_boxes" value={meters.boxes} onChange={()=>{}} /> </>}
+                      {product.metersByBox && <><input required style={{display: 'none'}} name="product_meters" id="product_meters" value={meters.meters} onChange={()=>{}} /> </>}
 
-                      {product.use && <><input required style={{display: 'none'}} name="product_use" id="product_use" value={product.use} onChange={()=>{}} /><br/></>}
-                      {product.finish && <><input required style={{display: 'none'}} name="product_finish" id="product_finish" value={product.finish} onChange={()=>{}} /><br/></>}
+                      {product.use && <><input required style={{display: 'none'}} name="product_use" id="product_use" value={product.use} onChange={()=>{}} /></>}
+                      {product.finish && <><input required style={{display: 'none'}} name="product_finish" id="product_finish" value={product.finish} onChange={()=>{}} /></>}
 
                       {{
                         floors: 
                         <>
-                          <input required style={{display: 'none'}} name="product_size" id="product_size" value={product.size} onChange={()=>{}}/><br/>
-                          <input required style={{display: 'none'}} name="product_thickness" id="product_thickness" value={product.thickness} onChange={()=>{}} /><br/>
-                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} /><br/>
-                          <input required style={{display: 'none'}} name="product_traffic" id="product_traffic" value={product.traffic} onChange={()=>{}} /><br/>
+                          <input required style={{display: 'none'}} name="product_size" id="product_size" value={product.size} onChange={()=>{}}/>
+                          <input required style={{display: 'none'}} name="product_thickness" id="product_thickness" value={product.thickness} onChange={()=>{}} />
+                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} />
+                          <input required style={{display: 'none'}} name="product_traffic" id="product_traffic" value={product.traffic} onChange={()=>{}} />
                         </>,
                         ceidivngs: 
                         <>
-                          <input required style={{display: 'none'}} name="product_caliber" id="product_caliber" value={product.caliber} onChange={()=>{}} /><br/>
-                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} /><br/>
+                          <input required style={{display: 'none'}} name="product_caliber" id="product_caliber" value={product.caliber} onChange={()=>{}} />
+                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} />
                         </>,
                         cpv:
                         <>
-                          <input required style={{display: 'none'}} name="product_size" id="product_size" value={product.size} onChange={()=>{}}/><br/>
-                          <input required style={{display: 'none'}} name="product_thickness" id="product_thickness" value={product.thickness} onChange={()=>{}} /><br/>
-                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} /><br/>
+                          <input required style={{display: 'none'}} name="product_size" id="product_size" value={product.size} onChange={()=>{}}/>
+                          <input required style={{display: 'none'}} name="product_thickness" id="product_thickness" value={product.thickness} onChange={()=>{}} />
+                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} />
                         </>,
                         accessories:
                         <>
-                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} /><br/>
+                          <input required style={{display: 'none'}} name="product_dimensions" id="product_dimensions" value={product.dimensions} onChange={()=>{}} />
                         </> 
                       }[product.type]}    
 
-                      {product.metersByBox && <><input required style={{display: 'none'}} name="product_metersByBox" id="product_metersByBox" value={product.metersByBox} onChange={()=>{}}/><br/></>}
-                      {product.color &&<><input required style={{display: 'none'}} name="product_color" id="product_color" value={product.color} onChange={()=>{}} /><br/></>}
-                      {product.brand && <><input required style={{display: 'none'}} name="product_brand" id="product_brand" value={product.brand} onChange={()=>{}} /><br/></>}
-                      {product.Reference &&<><input required style={{display: 'none'}} name="product_Reference" id="product_Reference" value={product.Reference} onChange={()=>{}} /><br/></>}
+                      {product.metersByBox && <><input required style={{display: 'none'}} name="product_metersByBox" id="product_metersByBox" value={product.metersByBox} onChange={()=>{}}/></>}
+                      {product.color &&<><input required style={{display: 'none'}} name="product_color" id="product_color" value={product.color} onChange={()=>{}} /></>}
+                      {product.brand && <><input required style={{display: 'none'}} name="product_brand" id="product_brand" value={product.brand} onChange={()=>{}} /></>}
+                      {product.Reference &&<><input required style={{display: 'none'}} name="product_Reference" id="product_Reference" value={product.Reference} onChange={()=>{}} /></>}
 
                       <input type="submit" className={styleContact.btnInput} value="Send" id="boton"/>
 

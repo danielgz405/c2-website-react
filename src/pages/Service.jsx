@@ -39,7 +39,7 @@ export default function Service() {
     emailjs.sendForm(EMAIL, TEMPLATE2, formRef.current, USER).then((result) => {
         setAlert({
             active: true,
-            message: 'Message has been sent',
+            message: 'El Mensaje se ha enviado, En unos dias recibirá un respuesta',
             autoClose: true,
             type: 'success',
           });

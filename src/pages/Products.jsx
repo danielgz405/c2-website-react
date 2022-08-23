@@ -42,7 +42,7 @@ export default function Products(){
     }
   }
   const addProduct = () => {
-    if(meters.meters === ''){
+    if(meters.meters === '' && product.metersByBox){
       window.scrollTo(0, refMeters.current.offsetTop - 200);
       setAlert({
         active: true,
@@ -52,6 +52,7 @@ export default function Products(){
       });
     }else{
       setOpenContact(true);
+      window.scrollTo(0, 500);
     }
   };
 
