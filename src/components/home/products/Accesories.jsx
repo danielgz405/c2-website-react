@@ -14,7 +14,7 @@ export default function Accesories({name, accessories, styleProduct, setSelectAc
             <div className="titlePart">
                 <h1 className="titlePart">{name}</h1>
             </div>
-            <div className="flex-row mx-auto w-87screen justify-center">
+            <div className="flex-row mx-auto w-87screen justify-center wrap">
                 {accessories.map((accessorie) => 
                     <div key={accessorie.id} className={styleProduct.itemStore} >
                         <div className={styleProduct.select} onClick={() => selectItems(accessorie)}>

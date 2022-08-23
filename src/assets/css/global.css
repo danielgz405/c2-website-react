@@ -905,6 +905,9 @@ a.list{
     justify-content: center;
     flex-direction: column;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 
 @media (max-width: 1143px) {
     .nav_text{
