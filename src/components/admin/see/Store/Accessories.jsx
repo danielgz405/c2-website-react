@@ -14,7 +14,7 @@ export default function Accessories({product, currentProduct, setCurrentProduct,
             </div>
             <div className="contend-table-col align-items-end">
               <div
-                onClick={() => {setCurrentProduct({...currentProduct, accesories: [...currentProduct.accesories, {id: product.id, title: product.title, value: product.value, url: product.url}]}); setOpenAccesories(false)}}
+                onClick={() => {setCurrentProduct({...currentProduct, accesories: [...currentProduct.accesories, {id: product.id, title: product.title, value: product.value, url: product.url, alt: product.alt}]}); setOpenAccesories(false)}}
                 className="basic-buttom mr-1"
               >
                 Agregar

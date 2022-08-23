@@ -831,12 +831,21 @@ a.list{
 .btn-input{
     right: 0px;
     position: absolute;
-    height: 100%;
+    height: 92%;
     padding-top: auto;
     padding-bottom: auto;
+    background-color: white;
+    border: 0px;
+    border-radius: 2rem;
+    margin: 0.2rem;
+    cursor: pointer;
 }
 .w-full{
     width: 100%;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
 }
 .item-list{
     padding-left: 1rem;
@@ -849,6 +858,52 @@ a.list{
 }
 .item-list:hover{
     background-color: rgb(235, 235, 235);
+}
+.rounded-full{
+    border-radius: 2rem !important;
+}
+.color-secondarie{
+    background-color: #E5E5E5;
+}
+.border-0{
+    border: 0px;
+}
+.h-1-8{
+    height: 1.8rem;
+}
+.m-0-5{
+    margin: 0.5rem;
+}
+.text-white{
+    color: rgb(255, 254, 254) !important;
+}
+.blod-text{
+    font-weight: 900;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+.w-87screen{
+    width: 87vw;
+}
+.justify-center{
+    justify-content: center;
+}
+.h-2-5{
+    height: 2.5rem;
+}
+.colorGreen{
+    color: #007f56;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.items-acc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @media (max-width: 1143px) {

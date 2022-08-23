@@ -12,7 +12,7 @@ const storage = getStorage(app);
 
 function hashFunction(key) {
   const splittedWord = key.toLowerCase().split("");
-  const codes = splittedWord.map((letter) => `${letter}${String(letter).charCodeAt(0)}`);
+  const codes = splittedWord.map((letter) => `${letter === ")" || letter === "(" ? "w" : letter}${String(letter === ")" || letter === "(" ? "w" : letter).charCodeAt(0)}`);
   return codes.join("");
 }
 
@@ -286,10 +286,23 @@ const handleDeleteGalery = (e, index) => {
                     <input className="input-form" required onChange={(e) => (setProduct({...product, title: e.target.value}))} value={product.title} autoComplete="name" type="text" name="title" id="title" placeholder="Ingresa el nombre del producto" />
                     <label className="title-table ml-1 mt-01" >Descripcion</label>
                     <textarea className="input-form" required onChange={(e) => (setProduct({...product, description: e.target.value}))} value={product.description} autoComplete="name" type="text" name="description" id="description" placeholder="Ingresa la descripcion del producto" />
-                    <label className="title-table ml-1 mt-01" >Dimenciones</label>
-                    <input className="input-form" required onChange={(e) => (setProduct({...product, dimensions: e.target.value}))} value={product.dimensions} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
                     <label className="title-table ml-1 mt-01" >Precio</label>
                     <input className="input-form" required onChange={(e) => (setProduct({...product, value: e.target.value}))} value={product.value} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Dimenciones</label>
+                    <input className="input-form" required onChange={(e) => (setProduct({...product, dimensions: e.target.value}))} value={product.dimensions} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Uso</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, use: e.target.value}))} value={product.use} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Acabado</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, finish: e.target.value}))} value={product.finish} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Metros por Caja</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, metersByBox: e.target.value}))} value={product.metersByBox} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Color</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, color: e.target.value}))} value={product.color} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Marca</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, brand: e.target.value}))} value={product.brand} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+                    <label className="title-table ml-1 mt-01" >Referencia</label>
+                    <input className="input-form" onChange={(e) => (setProduct({...product, Reference: e.target.value}))} value={product.Reference} autoComplete="name" type="text" name="value" id="value" placeholder="Ingresa el precio" />
+
 
                     {
                       {

@@ -2,17 +2,59 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import styleStore from '../assets/css/store.module.css'
-import { InformationCircleIcon } from "@heroicons/react/solid";
+import { InformationCircleIcon, SearchIcon } from "@heroicons/react/solid";
 import { app } from "../credentials";
 import Alert from "../common/Alert";
 import useAlert from "../hooks/useAlert";
+import InputList from "../common/InputList";
 
 const db = getFirestore(app);
 
 export default function Store(){
-  // eslint-disable-next-line no-unused-vars
   const { alert, setAlert, toggleAlert } = useAlert();
   const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+  
+  const items = [
+    {value: 'all', name: 'Todos', id: 0},
+    {value: 'floors', name: 'Pisos', id: 1},
+    {value: 'ceilings', name: 'Techos', id: 2},
+    {value: 'cpv', name: 'Cpv', id: 3},
+    {value: 'accessories', name: 'Accesorios', id: 4}
+  ]
+  const [selected, setSelected] = useState(items[0]);
+  const search = (e) => {
+    e.preventDefault();
+
+    if(e.target.value === "" ){
+      setProducts(allProducts);
+      setSelected(items[0]);
+    }else{
+      setProducts(
+        allProducts.filter((product) => {
+          let letersInput = Array.from(e.target.value.toLowerCase());
+          let letterProduct = Array.from(product.title.toLowerCase())
+  
+          return !letersInput.some((item) => !letterProduct.some((acc) => item === acc ));
+        })
+      )
+    }
+
+  };
+
+  useEffect(() => {
+    const searchByType = () => {
+      if(selected.value === 'all'){
+        setProducts(allProducts);
+      }else{
+        setProducts(
+          allProducts.filter((product) => product.type === selected.value)
+        );
+      }
+    };
+    searchByType();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
   useEffect(() => {
     const getProduct = async() => {
       try {
@@ -21,15 +63,36 @@ export default function Store(){
         querySnapshot.forEach((doc) => {
           listProduct.push({ ...doc.data(), id: doc.id });
         });
-        setProducts(listProduct)
+        setProducts(listProduct);
+        setAllProducts(listProduct);
       } catch (error) {
       }
     }
     getProduct();
-  }, [alert]);
+  }, [setAlert]);
     return (
       <>
       <Alert alert={alert} handleClose={toggleAlert}/>
+      <div className="titlePart">
+          <h1 className="titlePart">Store</h1>
+          <p className="contendPart">
+              Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
+              Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+          </p>
+      </div>
+      <div className={styleStore.contendPart2}>
+        <div className={styleStore.filters}>
+          <div className={styleStore.search}>
+            <input className={styleStore.searchInput} type="text" placeholder="Buscar Producto" onChange={(e) => search(e)} />
+            <button className={styleStore.btnSearch}>
+              <SearchIcon className="h-1-8"/>
+            </button>
+          </div>
+          <div className={styleStore.inputList}>
+            <InputList items={items} selected={selected} setSelected={setSelected} type="store" />
+          </div>
+        </div>
+      </div>
       <div className={styleStore.contendPart2}>
         <div className={styleStore.container}>
           {products.length > 0 ? 

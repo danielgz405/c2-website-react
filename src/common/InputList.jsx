@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function InputList({ items, selected, setSelected }) {
+export default function InputList({ items, selected, setSelected, type }) {
   const [query, setQuery] = useState('');
   const filteredItems =
     query === ''
@@ -20,16 +20,16 @@ export default function InputList({ items, selected, setSelected }) {
       
       <div className="relative">
         <Combobox.Input
-          className="input-form relative w-full"
+          className={classNames("input-form relative w-full", type && type === 'store' && 'rounded-full color-secondarie border-0' )}
           onChange={(event) => setQuery(event.target.value)}
           displayValue={(item) => item?.name}
         />
-        <Combobox.Button className="btn-input">
+        <Combobox.Button className={classNames("btn-input", type && type === 'store' && 'color-secondarie')}>
           <SelectorIcon className="h-1" aria-hidden="true" />
         </Combobox.Button>
 
         {filteredItems.length > 0 && (
-          <Combobox.Options className="items-list">
+          <Combobox.Options className={classNames("items-list", type && type === 'store' && 'rounded-full' )}>
             {filteredItems.map((item) => (
               <Combobox.Option
                 key={item?.id}
