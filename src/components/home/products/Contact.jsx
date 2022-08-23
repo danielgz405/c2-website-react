@@ -67,9 +67,9 @@ export default function Contact({styleContact, c2, product, setAlert, meters, se
                         ))}
                       </>
                       }
-                      <input required style={{display: 'none'}} name="product_name" id="product_name" value={product.title} onChange={()=>{}}/><br/>
-                      <input required style={{display: 'none'}} name="product_description" id="product_description" value={product.description} onChange={()=>{}} /><br/>
-                      <input required style={{display: 'none'}} name="product_price" id="product_price" value={product.value} onChange={()=>{}} /><br/>
+                      <input required style={{display: 'none'}} name="product_name" id="product_name" value={product.title} onChange={()=>{}}/>
+                      <input required style={{display: 'none'}} name="product_description" id="product_description" value={product.description} onChange={()=>{}} />
+                      <input required style={{display: 'none'}} name="product_price" id="product_price" value={product.value} onChange={()=>{}} />
                       
                       {product.metersByBox && <><input required style={{display: 'none'}} name="product_boxes" id="product_boxes" value={meters.boxes} onChange={()=>{}} /> </>}
                       {product.metersByBox && <><input required style={{display: 'none'}} name="product_meters" id="product_meters" value={meters.meters} onChange={()=>{}} /> </>}
