@@ -908,6 +908,9 @@ a.list{
 .wrap{
     flex-wrap: wrap;
 }
+.gap2{
+    gap: 2rem;
+}
 
 @media (max-width: 1143px) {
     .nav_text{

@@ -66,6 +66,7 @@ export default function Products(){
         } else {
           // doc.data() will be undefined in this case
           console.log("No such document!");
+          window.location.href = "../store"
         }
       }
       getProduct();

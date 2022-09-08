@@ -311,7 +311,6 @@ li.detallesList{
     justify-content: center;
     flex-wrap: wrap;
     width: 280px;
-    height: 410px;
     margin-top: 4rem;
     position: relative;
 }
@@ -322,12 +321,13 @@ li.detallesList{
     background-size: cover; 
 
     width: 100%;
-    height: 65%;
+    height: 260px;
     border-radius: 50px;
     cursor: pointer;
 }
 
 .itemStoreTitle{
+    text-align: center;
     margin-top: 1rem;
     font-family: 'Poppins Regular';
     font-size: 26px;
