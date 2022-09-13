@@ -1,12 +1,12 @@
+import Alert from "../common/Alert";
+import styleStore from "../assets/css/store.module.css";
+import useAlert from "../hooks/useAlert";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
-import styleStore from '../assets/css/store.module.css'
-import { InformationCircleIcon, SearchIcon } from "@heroicons/react/solid";
+import { InputList } from "../common/InputList";
 import { app } from "../credentials";
-import Alert from "../common/Alert";
-import useAlert from "../hooks/useAlert";
-import InputList from "../common/InputList";
+import { InformationCircleIcon, SearchIcon } from "@heroicons/react/solid";
 
 const db = getFirestore(app);
 

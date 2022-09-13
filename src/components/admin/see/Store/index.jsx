@@ -1,12 +1,12 @@
-import { useState, useRef, useEffect } from "react";
-import { CameraIcon, TrashIcon, InformationCircleIcon } from "@heroicons/react/outline";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL, deleteObject  } from "firebase/storage";
-import { app } from '../../../../credentials';
-import Modal from "../../../../common/Modal";
-import Items from "./Items";
-import InputList from "../../../../common/InputList";
 import Accessories from "./Accessories";
+import Items from "./Items";
+import Modal from "../../../../common/Modal";
+import { addDoc, collection, getDocs, getFirestore } from "firebase/firestore";
+import { deleteObject, getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
+import { useEffect, useRef, useState } from "react";
+import { InputList } from "../../../../common/InputList";
+import { app } from "../../../../credentials";
+import { CameraIcon, InformationCircleIcon, TrashIcon } from "@heroicons/react/outline";
 
 const db = getFirestore(app);
 const storage = getStorage(app);
