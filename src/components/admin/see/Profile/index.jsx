@@ -1,6 +1,6 @@
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 import { getAuth, signOut } from "firebase/auth";
-import { format } from 'date-fns';
-import { es } from 'date-fns/locale';
 
 const auth = getAuth();
 
@@ -33,7 +33,7 @@ export default function Porfile({setEdit, edit, user, setAlert}){
       <>
         <div className="container-section">
             <div className="header-section">
-                <h1 className="title-secction">Porfile</h1>
+                <h1 className="title-secction">Profile</h1>
                 <p className="description-secction">In this section you can modify your profile</p>
             </div>
             <div className="contend-section">
