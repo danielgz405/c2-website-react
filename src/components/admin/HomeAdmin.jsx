@@ -37,7 +37,7 @@ export default function HomeAdmin({user, setAlert, auth, signOut}){
             {
               Perfil: edit ? <PorfileEdit setAlert={setAlert} setEdit={setEdit} edit={edit} user={user} /> : <Porfile setEdit={setEdit} edit={edit} user={user} setAlert={setAlert} />,
               Store: edit ? <StoreEdit setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} /> : <Store setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} />,
-              Home: edit ? <HomeEdit /> : <Home setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut}/>,
+              Home: edit ? <HomeEdit /> : <Home setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} />,
               Servicios: edit ? <ServicesEdit /> : <Services setEdit={setEdit} />,
               Proyectos: edit ? <ProjectsEdit /> : <Projects setEdit={setEdit} />,
               Nosotros: edit ? <AboutUsEdit /> : <AboutUs setEdit={setEdit} />,

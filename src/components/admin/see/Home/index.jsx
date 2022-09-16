@@ -14,9 +14,10 @@ function hashFunction(key) {
   return codes.join("");
 }
 
-export default function Home({signOut, setAlert, auth, edit, setEdit}){
+export default function Home({signOut, setAlert, auth, edit, setEdit, products}){
   const formCards = useRef(null);
   const formSections = useRef(null);
+  const formSectionsOnlyText = useRef(null);
   const icons = Object.keys(Heroicons).map((icon, idx) => (
     {name: icon, icon: Heroicons[icon], value: icon, id: idx}
   ))
@@ -25,7 +26,7 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
   const items = [
     {value: 'cards', name: 'Cartas', id: 0},
     {value: 'sections', name: 'Secciones', id: 1},
-    {value: 'secitions-onlyText', name: 'Secciones de texto', id: 2},
+    {value: 'secitionsOnlyText', name: 'Secciones de texto', id: 2},
     {value: 'image', name: 'Imagen', id: 3},
     {value: 'smap', name: 'Mapa', id: 4},
   ]
@@ -36,6 +37,7 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
     subTitle: '',
     cards: [],
     sections: [],
+    sectionsOnlyText: [],
   });
   const logout = (event) => {
   event.preventDefault();
@@ -134,6 +136,21 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
     });
     setStructure({...structure, sections: section});
   }
+  const handleUploadSectionOnlyText = (e) => {
+    e.preventDefault();
+    
+    let data = {
+      title: formSectionsOnlyText.current.childNodes[0].value, 
+      content: formSectionsOnlyText.current.childNodes[1].value, 
+    }
+    
+    setStructure({...structure, sectionsOnlyText: [...structure.sectionsOnlyText, data]});
+  }
+  const handleDeleteSectionsOnlyText = (e, index) => {
+    e.preventDefault();
+    const sectionsOnlyText = structure.sectionsOnlyText.filter((item, indx) => indx !== index);
+    setStructure({...structure, sectionsOnlyText: sectionsOnlyText});
+  }
   useEffect(() => {
     setStructure({...structure, type: selected.value});
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -201,6 +218,8 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
                 ),
                 sections: (
                   <>
+                    <label className="title-table ml-1 mt-01" >Ruta</label>
+                    <input className="input-form mt-01" type="text" name="title" id="title" placeholder="Ingrese una ruta" />
                     <label className="title-table ml-1 mt-01" >Secciones</label>
                       {structure.sections?.length > 0 && 
                         <table>
@@ -245,6 +264,43 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
                         <input className="input-form mt-01" type="text" name="title" id="title" placeholder="Texto del boton" />
 
                         <input className="basic-buttom h-input mt-01" type="button" value="Agregar una seccion" onClick={(e) => handleUploadSection(e)}/>
+                      </div>
+                  </>
+                ),
+                secitionsOnlyText: (
+                  <>
+                   <label className="title-table ml-1 mt-01" >Secciones</label>
+                      {structure.sectionsOnlyText?.length > 0 && 
+                        <table>
+                          <thead>
+                            <tr>
+                              <th><label className="title-table ml-1">Title</label></th>
+                              <th><label className="title-table ml-1">Contenido</label></th>
+                              <th><span className="title-table ml-1">delete</span></th>
+                            </tr>
+                          </thead>
+                          
+                          {structure.sectionsOnlyText?.map((item, index) => (
+                            <tbody key={index}>
+                              <tr>
+                                <td className="table-galery text-secondarie"><p>{item.title}</p></td>
+                                <td className="table-galery text-secondarie"><p>{item.content}</p></td>
+                                <td className="table-galery">
+                                  <div className="delete-buttom h-input" onClick={(e) => handleDeleteSectionsOnlyText(e, index)}>
+                                    <Heroicons.TrashIcon className="h-1"/>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          ))}
+                        </table>
+                      }
+
+                      <div ref={formSectionsOnlyText} className="porfile-form">
+                        <input className="input-form" type="text" name="title" id="title" placeholder="Nombre de la seccion" />
+                        <textarea className="input-form mt-01" type="text" name="title" id="title" placeholder="Contenido de la seccion de la seccion" />
+
+                        <input className="basic-buttom h-input mt-01" type="button" value="Agregar una seccion" onClick={(e) => handleUploadSectionOnlyText(e)}/>
                       </div>
                   </>
                 ),
@@ -294,5 +350,4 @@ export default function Home({signOut, setAlert, auth, edit, setEdit}){
       </div>
     </>
   );
->>>>>>> 6416c3c04e5e992a6811302a5f66c36a04918629
 };

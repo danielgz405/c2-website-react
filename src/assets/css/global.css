@@ -385,6 +385,7 @@ a.list{
 }
 .alertError{
     background-color: #981d1d;
+    color: #fff;
 }
 .alertWarnig{
     background: #e0ec68;
@@ -394,6 +395,7 @@ a.list{
 }
 .alertSuccess{
     background-color: #007f56;
+    color: #fff;
 }
 .labelPrin{
     font-family: 'Poppins Semi Bold';
@@ -830,6 +832,7 @@ a.list{
     padding: 1rem;
 }
 .items-list{
+    z-index: 40;
     margin-top: 0.5rem;
     width: 100%;
     background-color: #cacaca;
