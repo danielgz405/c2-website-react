@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { BriefcaseIcon, ShoppingBagIcon, ColorSwatchIcon, HomeIcon } from '@heroicons/react/outline';
-import style from '../assets/css/home.module.css';
+import * as Heroicons from "@heroicons/react/outline";
+import React from "react";
+import fitment from "../assets/img/Home/closets3.png";
+import floor from "../assets/img/Home/pisoslaminados3.png";
+import sale from "../assets/img/Home/techo4.png";
+import style from "../assets/css/home.module.css";
+import { Link } from "react-router-dom";
 
 //images
-import sale from '../assets/img/Home/techo4.png';
-import fitment from '../assets/img/Home/closets3.png';
-import floor from '../assets/img/Home/pisoslaminados3.png';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -14,10 +14,10 @@ function classNames(...classes) {
 
 export default function Home (){
   const services = [
-    {name: 'Instalaciones', description: 'Tienda de materiales para la construcción', src: BriefcaseIcon, to: '/service/0'},
-    {name: 'Store', description: 'Tienda de materiales para la construcción', src: ShoppingBagIcon, to: '/store'},
-    {name: 'Estuco y Pintura', description: 'Tienda de materiales para la construcción', src: ColorSwatchIcon, to: '/service/1'},
-    {name: 'Muebles en Madera', description: 'Tienda de materiales para la construcción', src: HomeIcon, to: '/service/2'}
+    {name: 'Instalaciones', description: 'Tienda de materiales para la construcción', src: Heroicons['BriefcaseIcon'], to: '/service/0'},
+    {name: 'Store', description: 'Tienda de materiales para la construcción', src: Heroicons['ShoppingBagIcon'], to: '/store'},
+    {name: 'Estuco y Pintura', description: 'Tienda de materiales para la construcción', src: Heroicons['ColorSwatchIcon'], to: '/service/1'},
+    {name: 'Muebles en Madera', description: 'Tienda de materiales para la construcción', src: Heroicons['HomeIcon'], to: '/service/2'}
   ]
   const products = [
     {name: 'Venta de Techo PVC', description: 'Variedad en tonos, calidad en nuestros productos, corazón en nuestros proyectos. Agenda con nosotros!', to: '/store', img: sale, className:'productoH', classImg: 'imgProduct1'},
