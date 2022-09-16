@@ -9,7 +9,7 @@ export default function Home(){
         >
           <InformationCircleIcon className="commingSonIcon"/>
           <span className="commingSonText">Estamos trabajando para ofrecerte este servicio</span>
-      </div>
+        </div>
       </>
     );
 };
