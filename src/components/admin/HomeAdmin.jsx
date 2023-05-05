@@ -1,20 +1,10 @@
-import AboutUs from "./see/AboutUs";
-import AboutUsEdit from "./edit/AboutUs";
-import Contact from "./see/Contact";
-import ContactEdit from "./edit/Contact";
-import Home from "./see/Home";
-import HomeEdit from "./edit/Home";
 import Porfile from "./see/Profile";
 import PorfileEdit from "./edit/Profile";
-import Projects from "./see/Projects";
-import ProjectsEdit from "./edit/Projects";
-import Services from "./see/Services";
-import ServicesEdit from "./edit/Services";
 import Store from "./see/Store";
 import StoreEdit from "./edit/Store";
 import SubNavigation from "./SubNavigation";
 import { useState } from "react";
-import { AnnotationIcon, HomeIcon, PhotographIcon, ShoppingBagIcon, TagIcon, UserCircleIcon, UsersIcon } from "@heroicons/react/outline";
+import { ShoppingBagIcon, UserCircleIcon } from "@heroicons/react/outline";
 
 export default function HomeAdmin({user, setAlert, auth, signOut}){
   const [current, setCurrent] = useState('Perfil');
@@ -22,11 +12,7 @@ export default function HomeAdmin({user, setAlert, auth, signOut}){
   const subNavigation = [
     { name: 'Perfil', icon: UserCircleIcon, current: current === 'Perfil' },
     { name: 'Store', icon: ShoppingBagIcon, current: current === 'Store' },
-    { name: 'Home', icon: HomeIcon, current: current === 'Home' },
-    { name: 'Servicios', icon: TagIcon, current: current === 'Servicios' },
-    { name: 'Proyectos', icon: PhotographIcon, current: current === 'Proyectos' },
-    { name: 'Nosotros', icon: UsersIcon, current: current === 'Nosotros' },
-    { name: 'Contacto', icon: AnnotationIcon, current: current === 'Contacto' },
+
   ];
   return (
     <>
@@ -37,11 +23,6 @@ export default function HomeAdmin({user, setAlert, auth, signOut}){
             {
               Perfil: edit ? <PorfileEdit setAlert={setAlert} setEdit={setEdit} edit={edit} user={user} /> : <Porfile setEdit={setEdit} edit={edit} user={user} setAlert={setAlert} />,
               Store: edit ? <StoreEdit setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} /> : <Store setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} />,
-              Home: edit ? <HomeEdit /> : <Home setEdit={setEdit} edit={edit} setAlert={setAlert} auth={auth} signOut={signOut} />,
-              Servicios: edit ? <ServicesEdit /> : <Services setEdit={setEdit} />,
-              Proyectos: edit ? <ProjectsEdit /> : <Projects setEdit={setEdit} />,
-              Nosotros: edit ? <AboutUsEdit /> : <AboutUs setEdit={setEdit} />,
-              Contacto: edit ? <ContactEdit /> : <Contact setEdit={setEdit} />,
             }[current]
           }
         </div>

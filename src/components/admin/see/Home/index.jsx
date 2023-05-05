@@ -151,6 +151,7 @@ export default function Home({signOut, setAlert, auth, edit, setEdit, products})
     const sectionsOnlyText = structure.sectionsOnlyText.filter((item, indx) => indx !== index);
     setStructure({...structure, sectionsOnlyText: sectionsOnlyText});
   }
+
   useEffect(() => {
     setStructure({...structure, type: selected.value});
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -218,8 +219,6 @@ export default function Home({signOut, setAlert, auth, edit, setEdit, products})
                 ),
                 sections: (
                   <>
-                    <label className="title-table ml-1 mt-01" >Ruta</label>
-                    <input className="input-form mt-01" type="text" name="title" id="title" placeholder="Ingrese una ruta" />
                     <label className="title-table ml-1 mt-01" >Secciones</label>
                       {structure.sections?.length > 0 && 
                         <table>
@@ -261,7 +260,16 @@ export default function Home({signOut, setAlert, auth, edit, setEdit, products})
                             Subir Imagen
                           </div>
                         </div>
+                        <div className="upload-grid mt-01">
+                          <input className="input-form" type="text" name="title" id="title" placeholder="Ingrese una ruta" />
+                          <div className="flex ">
+                            <input type="checkbox" name="transporte" value="" /><span className="title-table ml-05">Externa</span>
+                          </div>
+                        </div>
                         <input className="input-form mt-01" type="text" name="title" id="title" placeholder="Texto del boton" />
+                        <div className="flex ">
+                          <input type="checkbox" name="transporte" value="" /><span className="title-table ml-05">Derecha</span>
+                        </div>
 
                         <input className="basic-buttom h-input mt-01" type="button" value="Agregar una seccion" onClick={(e) => handleUploadSection(e)}/>
                       </div>

@@ -1,8 +1,8 @@
 import * as Heroicons from "@heroicons/react/outline";
 import React from "react";
-import fitment from "../assets/img/Home/closets3.png";
-import floor from "../assets/img/Home/pisoslaminados3.png";
-import sale from "../assets/img/Home/techo4.png";
+import fitment from "../assets/img/Home/IMG_1952.png";
+import floor from "../assets/img/Home/led.png";
+import sale from "../assets/img/Home/IMG_1932.png";
 import style from "../assets/css/home.module.css";
 import { Link } from "react-router-dom";
 
@@ -14,15 +14,15 @@ function classNames(...classes) {
 
 export default function Home (){
   const services = [
-    {name: 'Instalaciones', description: 'Tienda de materiales para la construcción', src: Heroicons['BriefcaseIcon'], to: '/service/0'},
-    {name: 'Store', description: 'Tienda de materiales para la construcción', src: Heroicons['ShoppingBagIcon'], to: '/store'},
-    {name: 'Estuco y Pintura', description: 'Tienda de materiales para la construcción', src: Heroicons['ColorSwatchIcon'], to: '/service/1'},
-    {name: 'Muebles en Madera', description: 'Tienda de materiales para la construcción', src: Heroicons['HomeIcon'], to: '/service/2'}
+    {name: 'Instalaciones', description: ' ¡Haz realidad tus proyectos de construcción con nuestro servicio de Instalaciones Profesionales!', src: Heroicons['BriefcaseIcon'], to: '/service/0'},
+    {name: 'Tienda de Materiales', description: 'Encuentra todo lo que necesitas para tu proyecto de construcción', src: Heroicons['ArchiveIcon'], to: '/store'},
+    {name: 'Estuco y Pintura', description: 'Servicios especializados en estuco y pintura para lograr el resultado que deseas', src: Heroicons['ColorSwatchIcon'], to: '/service/1'},
+    {name: 'Muebles en Madera', description: 'Muebles de madera personalizados de alta calidad para tus espacios', src: Heroicons['TableIcon'], to: '/service/2'}
   ]
   const products = [
-    {name: 'Venta de Techo PVC', description: 'Variedad en tonos, calidad en nuestros productos, corazón en nuestros proyectos. Agenda con nosotros!', to: '/store', img: sale, className:'productoH', classImg: 'imgProduct1'},
-    {name: 'Muebles Personalizados', description: 'Diseñamos tus espacios, tu lo imaginas nosotros lo hacemos realidad. Cotiza con nosotros, programa tu toma de medidas', to: '/store', img: fitment, className:'productoHR', classImg: 'imgProduct2'},
-    {name: 'Venta de Pisos Laminados', description: 'Diseñamos tus espacios, tu lo imaginas nosotros lo hacemos realidad. Cotiza con nosotros, programa tu toma de medidas', to: '/store', img: floor, className:'productoH', classImg: 'imgProduct3'}
+    {name: 'Pisos en PVC', description: 'Descubre nuestra gran variedad de modelos de pisos en PVC, resistentes y duraderos, ideales para cualquier espacio. Agenda con nosotros!', to: '/store', img: fitment, className:'productoH', classImg: 'imgProduct2'},
+    {name: 'Techos', description: 'Encuentra techos de diferentes materiales y diseños, para brindarle a tus espacios la protección y estética que necesitan.', to: '/store', img: sale, className:'productoHR', classImg: 'imgProduct1'},
+    {name: 'Productos de iluminación LED', description: 'En CyC Acabados Arquitectónicos, nos complace ofrecerte una amplia gama de productos de iluminación LED de alta calidad para tus proyectos de construcción y decoración.', to: '/store', img: floor, className:'productoH', classImg: 'imgProduct3'}
   ]
 
   return (
@@ -31,8 +31,7 @@ export default function Home (){
         <div className="titlePart">
             <h1 className="titlePart">Servicios</h1>
             <p className="contendPart">
-                Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
-                Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+            En CyC Acabados Arquitectónicos ofrecemos servicios de asesoría y visualización para que puedas materializar tu proyecto de forma exitosa.
             </p>
         </div>
         <div className={style.contendPart1}>
@@ -53,7 +52,7 @@ export default function Home (){
       <div className={style.part2}>
           <div className="titlePart">
               <h1 className="titlePart">Productos</h1>
-              <p className="contendPart">Tienda de materiales para la construcción</p>
+              <p className="contendPart">Encuentra todo lo que necesitas para tus proyectos de construcción y renovación en nuestro catálogo de productos. Ofrecemos una amplia variedad de materiales de alta calidad y a precios competitivos, descubre nuestra gran variedad de modelos de pisos en PVC, Techos, CPV y mas.</p>
           </div>
           <div className={style.contendPart2}>
             {products.map((item) => (
@@ -63,7 +62,7 @@ export default function Home (){
                       <p className={style.productoContend}>
                          {item.description}
                       </p>
-                      <Link to={item.to} className={style.productoBtn}>Store</Link>
+                      <Link to={item.to} className={style.productoBtn}>Tienda de Materiales</Link>
                   </div>
                   <div className={style.productoImg}>
                       <img src={item.img} alt="" className={classNames(style[item.classImg])}/>
@@ -75,7 +74,7 @@ export default function Home (){
       <div className={style.part3} id="location">
           <div className="titlePart">
               <h1 className="titlePart">Ubicacion</h1>
-              <p className="contendPart">Tienda de materiales para la construcción</p>
+              <p className="contendPart">Encuentra nuestra tienda de materiales para la construcción en la ubicación más conveniente para ti. Ofrecemos una amplia variedad de productos de alta calidad, incluyendo pisos en PVC, techos, CPV y accesorios. Ven y visítanos para conocer más sobre nuestros productos y servicios.</p>
           </div>
           <div className={style.contendPart3}>
               <div className={style.location}>

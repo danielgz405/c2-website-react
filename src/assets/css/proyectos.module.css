@@ -25,6 +25,15 @@
     cursor: pointer;
 }
 
+.imgModal{
+    height: 80vh;
+    width: 95%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 1284px) {
     .galeriaImgContainer{
         width: 80vw;
