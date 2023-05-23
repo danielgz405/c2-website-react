@@ -6,11 +6,9 @@ La API de Prisma ofrece una variedad de endpoints que te permiten interactuar co
 
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
-- [Configuración](#configuración)
 - [Endpoints](#endpoints)
-- [Uso](#uso)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+- [Auth](#auth)
+- [User routes](#user/routes)
 
 
 ## Requisitos
