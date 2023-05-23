@@ -1,70 +1,382 @@
-# Getting Started with Create React App
+# Backend prisma
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La API de Prisma ofrece una variedad de endpoints que te permiten interactuar con diferentes funcionalidades y datos del sistema.
 
-## Available Scripts
+## Tabla de contenidos
 
-In the project directory, you can run:
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Endpoints](#endpoints)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requisitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+requisitos necesarios para ejecutar el proyecto:
 
-### `npm test`
+- Versión de Go 1.19.5
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación
 
-### `npm run build`
+Una vez hayas clonado el repositorio, simplemente ejecuta el siguiente comando:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+go run main.go
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Endpoints
 
-### `npm run eject`
+## Auth
+- POST /signup 
+data:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```json
+{
+  "email": "",
+  "password": "",
+  "name": "",
+  "company": "",
+  "location": "",
+  "roles": [],
+  "image": "",
+  "desertref": ""
+}
+```
+- POST /login
+data:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+{
+  "email": "",
+  "password": "",
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## User routes
+- GET /profile
+- GET /users/list/{companyId}
+- PATCH /users/update/{id}
+data:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```json
+{
+  "name": "",
+  "email": "",
+  "company": "",
+  "location": "",
+  "roles": [],
+  "active": false,
+  "image": "",
+  "desertref": ""
+}
+```
+- PATCH /users/update/roles/{id}
+data:
 
-## Learn More
+```json
+{
+  "_id": "",
+  "roles": []
+}
+```
+- DELETE /users/delete/{id}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Companies routes
+- POST /companies
+data:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "name": "",
+  "db": "",
+  "email": "",
+  "website": "",
+  "city": "",
+  "nit": "",
+  "desertref": "",
+  "logo": "",
+  "logoPdf": "",
+  "desertrefPdf": "",
+  "primaryColor": "",
+  "secondaryColor": ""
+}
+```
+- GET /companies/findone/{id}
+- GET /companies/list
+- GET /companies/CompanyData/location/{location}
+- PATCH /companies/update/{id}
+data:
 
-### Code Splitting
+```json
+{
+  "name": "",
+  "email": "",
+  "website": "",
+  "addsInStall": false,
+  "city": "",
+  "nit": "",
+  "desertref": "",
+  "logo": "",
+  "logoPdf": "",
+  "desertrefPdf": "",
+  "primaryColor": "",
+  "secondaryColor": "",
+  "active": false
+}
+```
+- DELETE /companies/delete/{id}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Companies/Locations routes
+- PATCH /companies/addLocation/{id}
+data:
 
-### Analyzing the Bundle Size
+```json
+{
+  "name": "",
+  "email": "",
+  "city": ""
+}
+```
+- PATCH /companies/updateLocation/{id}/location/{location}
+data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```json
+{
+  "name": "",
+  "email": "",
+  "city": ""
+}
+```
+- PATCH /companies/removeLocation/{id}/location/{location}
 
-### Making a Progressive Web App
+## Companies/CustomerFields routes
+- PATCH /companies/addCustomerField/{id}
+data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```json
+{
+  "location": "",
+  "name": "",
+  "value": "",
+  "type": "",
+  "size": 0,
+  "required": false
+}
+```
+- PATCH /companies/updateCustomerField/{id}/field/{field}
+data:
 
-### Advanced Configuration
+```json
+{
+  "location": "",
+  "name": "",
+  "value": "",
+  "type": "",
+  "size": 0,
+  "required": false
+}
+```
+- PATCH /companies/removeCustomerField/{id}/field/{field}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Companies/WorkerFields routes
+- PATCH /companies/addWorkerField/{id}
+data:
 
-### Deployment
+```json
+{
+  "location": "",
+  "name": "",
+  "value": "",
+  "type": "",
+  "size": 0,
+  "required": false
+}
+```
+- PATCH /companies/updateWorkerField/{id}/field/{field}
+data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```json
+{
+  "location": "",
+  "name": "",
+  "value": "",
+  "type": "",
+  "size": 0,
+  "required": false
+}
+```
+- PATCH /companies/removeWorkerField/{id}/field/{field}
 
-### `npm run build` fails to minify
+## Companies/AditionalCost routes
+- POST /aditionalCosts
+data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "location": "",
+  "year": "",
+  "value": 0.0
+}
+```
+- GET /aditionalCosts/list
+- GET /aditionalCosts/locList/{year}
+- GET /aditionalCosts/comList/{company}
+- PATCH /aditionalCosts/update/{id}
+data:
+
+```json
+{
+  "year": "",
+  "value": 0.0
+}
+```
+- DELETE /aditionalCosts/delete/{id}
+
+## Positions routes
+- POST /positions
+data:
+
+```json
+{
+  "location": "",
+  "name": "",
+  "description": ""
+}
+```
+- GET /positions/list
+- GET /positions/locList
+- GET /positions/comList/{company}
+- PATCH /positions/update/{id}
+```json
+{
+  "name": "",
+  "description": "",
+  "active": false
+}
+```
+- DELETE /positions/delete/{id}
+
+## Tags routes
+- POST /tags
+- GET /tags/list
+- GET /tags/locList
+- GET /tags/comList/{company}
+- PATCH /tags/update/{id}
+- DELETE /tags/delete/{id}
+
+## Terms routes
+- POST /terms
+- GET /terms/list
+- GET /terms/locList
+- GET /terms/comList/{company}
+- PATCH /terms/update/{id}
+- DELETE /terms/delete/{id}
+- PATCH /terms/addSuggest
+
+## Modes routes
+- POST /modes
+- GET /modes/list
+- GET /modes/locList
+- GET /modes/comList/{company}
+- PATCH /modes/update/{id}
+- DELETE /modes/delete/{id}
+
+## Schedule routes
+- POST /schedules
+- GET /schedules/list
+- GET /schedules/locList
+- GET /schedules/comList/{company}
+- PATCH /schedules/update/{id}
+- DELETE /schedules/delete/{id}
+
+## Quotes routes
+- POST /quotes
+- GET /quotes/findByDates/{date}
+
+## Customers routes
+- POST /customers
+- GET /customers/findone/{id}
+- GET /customers/list/{name}/{limit}/{skip}
+- GET /customers/all
+- PATCH /customers/update/{id}
+- DELETE /customers/delete/{id}
+- PATCH /customers/ActiveCustomer
+- GET /customers/amount
+
+## Workers routes
+- POST /workers
+- GET /workers/findone/{id}
+- GET /workers/findByIdentification/{identification}
+- GET /workers/list/{name}/{limit}/{skip}
+- GET /workers/all
+- POST /workers/array
+- PATCH /workers/ActiveWorkers
+- GET /workers/amount
+- GET /workers/stats/{startDate}/{endDate}
+- GET /workers/tracking/{startDate}/{endDate}
+- GET /workers/tracking/list/{name}/{limit}/{skip}/{startDate}/{endDate}
+- POST /workers/notInArray
+- PATCH /workers/update/{id}
+- DELETE /workers/delete/{id}
+- GET /workers/legacy
+
+# Plans routes
+
+- POST /plans
+- GET /plans/getAll/{location}/{startDate}/{endDate}
+- GET /plans/actives/{customer}
+- GET /plans/getActives/{customer}
+- GET /plans/findByDates/{customer}/{startDate}/{endDate}
+- PATCH /plans/update/{id}
+- DELETE /plans/delete/{id}
+
+# Plans/Places routes
+
+- PATCH /plans/addPlace/{id}
+- PATCH /plans/updatePlace/{id}/place/{place}
+- PATCH /plans/removePlace/{id}/place/{place}
+
+# Suggest Plan routes
+
+- POST /plans/suggest/{id}
+
+# Stalls routes
+
+- POST /stalls
+- PATCH /stalls/update/{id}
+- PATCH /stalls/addworker/{id}
+- PATCH /stalls/removeworker/{id}/worker/{worker}
+- PATCH /stalls/fastUpdate/{id}
+- PATCH /stalls/updateStatus/{id}
+- PATCH /stalls/updateStatuses/{id}
+- PATCH /stall/updateMultipleStatuses/{id}
+- DELETE /stalls/delete/{id}
+- GET /stalls/legacy
+
+# NoveltyTables routes
+
+- PATCH /noveltyTables/addNovelty/{id}
+- PATCH /noveltyTables/addMultipleNovelties/{id}
+- PATCH /noveltyTables/AddAppendNovelty/{noveltyTableId}/{noveltyId}
+- POST /noveltyTable/ActiveNovelties/{id}
+- PATCH /noveltyTable/ActiveAppend/{noveltyTableId}/{noveltyId}
+- PATCH /noveltyTables/removeNovelty/{id}/novelty/{novelty}
+- DELETE /noveltyTables/delete/{id}
+
+# SubstituteTables routes
+
+- PATCH /substituteTables/addSubstitutes/{id}
+- PATCH /substituteTables/removeSubstitute/{id}/substitute/{substitute}
+- DELETE /substituteTables/delete/{id}
+- PATCH /substituteTables/addMultipleSubstitutes/{id}
+- PATCH /substituteTables/AddAppendSubstitute/{substituteTableId}/{substituteId}
+- POST /substituteTables/ActiveSubstitutes/{id}
+- PATCH /substituteTables/ActiveAppend/{substituteTableId}/{substituteId}
+
+# WebSocket
+
+- /ws/{Authorization}
