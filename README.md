@@ -3,13 +3,22 @@
 La API de Prisma ofrece una variedad de endpoints que te permiten interactuar con diferentes funcionalidades y datos del sistema.
 
 ## Tabla de contenidos
-
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Endpoints](#endpoints)
 - [Auth](#auth)
-- [User routes](#user/routes)
-
+- [User routes](#user-routes)
+- [Companies routes](#companies-routes)
+- [Positions routes](#positions-routes)
+- [Tags routes](#tags-routes)
+- [Terms routes](#terms-routes)
+- [Modes routes](#modes-routes)
+- [Schedule routes](#schedule-routes)
+- [Quotes routes](#quotes-routes)
+- [Customers routes](#customers-routes)
+- [Workers routes](#workers-routes)
+- [Plans routes](#plans-routes)
+- [Stalls routes](#stalls-routes)
+- [NoveltyTables routes](#noveltytables-routes)
+- [SubstituteTables routes](#substitutetables-routes)
+- [WebSocket](#websocket)
 
 ## Requisitos
 
