@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom"
-import { LocationMarkerIcon, TagIcon, PhotographIcon, UsersIcon, AnnotationIcon } from '@heroicons/react/outline';
+import { LocationMarkerIcon, TagIcon, PhotographIcon, UsersIcon, AnnotationIcon, ArchiveIcon } from '@heroicons/react/outline';
 import Header from "./Header";
 import Footer from "./Footer"
 
@@ -63,6 +63,12 @@ const Layout = () => {
       current: useLocation().pathname === '/',
       icon: LocationMarkerIcon,
       title: 'Localizacion',
+    },
+    {
+      to: '/store',
+      current: useLocation().pathname === '/store',
+      icon: ArchiveIcon,
+      title: 'Tienda',
     },
     {
       to: '/services',

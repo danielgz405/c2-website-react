@@ -1,0 +1,122 @@
+.isolate {
+    isolation: isolate;
+}
+
+.min-h-full {
+	min-height: 100%;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.inset-0 {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.-z-10 {
+    z-index: -10;
+}
+
+.h-full{
+    height: 100%;
+}
+
+.object-cover{
+    object-fit: cover;
+}
+
+.object-top {
+    object-position: top;
+}
+
+.h-scren {
+    height: 100vh;
+}
+
+.max-w-7xl{
+    max-width: 80rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.font-semibold{
+    font-weight: 600;
+}
+
+.leading-8 {
+    line-height: 2rem;
+}
+
+.leading-7 {
+    line-height: 1.75rem; /* 28px */
+}
+
+.text-white\/70 {
+    color: rgb(255 255 255 / 0.7);
+}
+
+.mt-4 {
+    margin-top: 0.25rem;
+}
+
+.text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.tracking-tight{
+    letter-spacing: -0.025em;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+@media (min-width: 640px) {
+    .sm\:py-40 {
+        padding-top: 10rem/* 160px */;
+        padding-bottom: 10rem/* 160px */;
+    }
+    .sm\:text-5xl {
+        font-size: 3rem; /* 48px */
+        line-height: 1;
+    }
+    .sm\:mt-6 {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:px-8 {
+        padding-left: 2rem/* 32px */;
+        padding-right: 2rem/* 32px */;
+    }
+}
