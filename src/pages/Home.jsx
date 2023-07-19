@@ -20,9 +20,9 @@ export default function Home (){
     {name: 'Muebles en Madera', description: 'Muebles de madera personalizados de alta calidad para tus espacios', src: Heroicons['TableIcon'], to: '/service/2'}
   ]
   const products = [
-    {name: 'Pisos en PVC', description: 'Descubre nuestra gran variedad de modelos de pisos en PVC, resistentes y duraderos, ideales para cualquier espacio. Agenda con nosotros!', to: '/store', img: fitment, className:'productoH', classImg: 'imgProduct2'},
-    {name: 'Techos', description: 'Encuentra techos de diferentes materiales y diseños, para brindarle a tus espacios la protección y estética que necesitan.', to: '/store', img: sale, className:'productoHR', classImg: 'imgProduct1'},
-    {name: 'Productos de iluminación LED', description: 'En CyC Acabados Arquitectónicos, nos complace ofrecerte una amplia gama de productos de iluminación LED de alta calidad para tus proyectos de construcción y decoración.', to: '/store', img: floor, className:'productoH', classImg: 'imgProduct3'}
+    {name: 'Pisos en PVC', description: 'Descubre nuestra gran variedad de modelos de pisos en PVC, resistentes y duraderos, ideales para cualquier espacio. Agenda con nosotros!', to: '/store', img: fitment, className:'productoH', classImg: 'imgProduct2', alt: "Pisos en PVC resistentes y duraderos para cualquier espacio en Zipaquirá, Cundinamarca - CyC Acabados Arquitectónicos"},
+    {name: 'Techos', description: 'Encuentra techos de diferentes materiales y diseños, para brindarle a tus espacios la protección y estética que necesitan.', to: '/store', img: sale, className:'productoHR', classImg: 'imgProduct1', alt: "Techos de diferentes materiales y diseños para brindar protección y estética en Zipaquirá, Cundinamarca - CyC Acabados Arquitectónicos"},
+    {name: 'Productos de iluminación LED', description: 'En CyC Acabados Arquitectónicos, nos complace ofrecerte una amplia gama de productos de iluminación LED de alta calidad para tus proyectos de construcción y decoración.', to: '/store', img: floor, className:'productoH', classImg: 'imgProduct3', alt: "Productos de iluminación LED de alta calidad para proyectos de construcción y decoración en Zipaquirá, Cundinamarca - CyC Acabados Arquitectónicos"}
   ]
 
   return (
@@ -65,7 +65,7 @@ export default function Home (){
                       <Link to={item.to} className={style.productoBtn}>Tienda de Materiales</Link>
                   </div>
                   <div className={style.productoImg}>
-                      <img src={item.img} alt="" className={classNames(style[item.classImg])}/>
+                      <img src={item.img} alt={item.alt} className={classNames(style[item.classImg])}/>
                   </div>
               </div>
             )) }

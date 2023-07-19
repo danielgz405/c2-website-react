@@ -1077,6 +1077,9 @@ a.list{
 }
 @media (max-width: 618px) {
 
+    /*.header{
+        position: relative !important;
+    }*/
     .banner{
         height: 80vh !important;
     }
@@ -1085,7 +1088,9 @@ a.list{
     }
     .nav{
         position: fixed;
-        transform: translate(0px, 45vh);
+        height: 60px !important;
+        transform: translate(0px, 0px);
+        bottom: 5px;
         z-index: 5;
     }
     .imgItem{

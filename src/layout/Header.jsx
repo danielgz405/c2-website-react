@@ -26,9 +26,10 @@ export default function Header({backgrounds, redes, links}){
                 <div key={background.current} className="banner" style={ background.style }>
                     <div className="bannerTx">
                         <h1 className="bannerTxTitle">CyC Acabados Arquitectónicos</h1>
-                        <h5 className="bannerTxSubtitle">Tienda de materiales para la construcción</h5>
+                        <h5 className="bannerTxSubtitle">¡Bienvenidos! <br/> Aquí encontrarás una amplia variedad de materiales para la construcción. <br/>
+                            ¡Te esperamos!</h5>
                         <Link className="btnBanner" to="/contact">
-                        <h3>Contact</h3>
+                        <h3>Contáctanos</h3>
                         </Link>
                     </div>
                     <div className="bannerIm"></div>

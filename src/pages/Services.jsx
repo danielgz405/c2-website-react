@@ -7,33 +7,32 @@ function classNames(...classes) {
 }
 
 export default function Services() {
-
   
   const services = [
     {
       name: 'Instalaciones', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis', 
+      description: '¡Haz realidad tus proyectos de construcción con nuestro servicio de Instalaciones Profesionales! Nuestro equipo de expertos altamente capacitados se encargará de llevar a cabo las instalaciones de manera eficiente y profesional. estamos aquí para brindarte soluciones integrales.', 
       to: '/service/0', 
       img: 'imgProduct1', 
       class: 'productoH'
     },
     {
-      name: 'Store', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis', 
+      name: 'Tienda de Materiales', 
+      description: 'Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lugar. En nuestra tienda, ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer tus necesidades. Desde pisos en PVC duraderos y estilosos hasta techos resistentes y estéticamente atractivos, tenemos todo lo necesario para dar vida a tu proyecto.', 
       to: '/store', 
       img: 'imgProduct2', 
       class: 'productoHR'
     },
     {
       name: 'Estuco y Pintura', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis', 
+      description: 'Servicios especializados en estuco y pintura para lograr el resultado que deseas. En CyC Acabados Arquitectónicos, contamos con un equipo de expertos en estuco y pintura que se encargará de transformar tus espacios con acabados impecables y de alta calidad.', 
       to: '/service/1', 
       img: 'imgProduct3', 
       class: 'productoH'
     },
     {
       name: 'Muebles en Madera', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis', 
+      description: 'Muebles de madera personalizados de alta calidad para tus espacios. En CyC Acabados Arquitectónicos, nos especializamos en la creación de muebles de madera a medida, diseñados para satisfacer tus necesidades y superar tus expectativas.', 
       to: '/service/2', 
       img: 'imgProduct4', 
       class: 'productoHR'
@@ -46,8 +45,7 @@ export default function Services() {
         <div className="titlePart">
             <h1 className="titlePart">Servicios</h1>
             <p className="contendPart">
-                Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
-                Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+            En CyC Acabados Arquitectónicos ofrecemos servicios de asesoría y visualización para que puedas materializar tu proyecto de forma exitosa.
             </p>
         </div>
         <div className={styleServices.contendPart2}>

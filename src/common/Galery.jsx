@@ -14,7 +14,7 @@ export default function Galery({name, images, styleService}){
         display: 'block',
     }))
     const bind = useDrag(({ active, movement: [mx], direction: [xDir], cancel }) => {
-        if (active && Math.abs(mx) > width / 2) {
+        if (active && Math.abs(mx) > width / 3) {
             index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, images.length - 1)
             cancel()
         }
@@ -38,24 +38,6 @@ export default function Galery({name, images, styleService}){
                         </animated.div>
                     ))}
                 </div>
-
-                {/* <div className={styleService.bannerGaleriaMain} id="fondo">
-                    <div className="btnMoveGaleria">
-                        <div className="izq btns">
-                            <img src="./assets/img/productos/Vector 4.svg" alt="" className="btnIzq flecha">
-                        </div>
-                        <div className="der btns">
-                            <img src="./assets/img/productos/Vector 2.svg" alt="" className="btnDer flecha">
-                        </div>
-                    </div>
-                </div>
-                <div className={styleService.imgsContainer}>
-                    <animated.div className={styleService.imgSecundarias} ref={galery} id="container_galery" style={style}>
-                        {images.map((item, index) => (
-                            <div key={index} className={styleService.imgItemGaleria} id="container_galery_son" style={item.img}></div>
-                        ))}
-                    </animated.div>
-                </div> */}
             </div>
 
         </div>

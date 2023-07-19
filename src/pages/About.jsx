@@ -6,9 +6,9 @@ function classNames(...classes) {
 
 export default function About() {
     const aboutUs = [
-        {name: 'Mision', description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis'},
-        {name: 'Vision', description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis'},
-        {name: 'Nuestra Experiencia', description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis'},
+        {name: 'Mision', description: 'En CyC Acabados Arquitectónicos, nuestra misión es proporcionar soluciones integrales y de alta calidad en el campo de la construcción y decoración. Nos esforzamos por superar las expectativas de nuestros clientes al ofrecer productos y servicios excepcionales que reflejen su estilo y personalidad. Nuestra dedicación y pasión por la excelencia nos impulsan a crear espacios únicos y funcionales que enriquezcan la vida de las personas.'},
+        {name: 'Vision', description: 'Nuestra visión es convertirnos en líderes reconocidos en el mercado de acabados arquitectónicos, destacándonos por nuestra calidad, innovación y compromiso con la satisfacción del cliente. Buscamos expandir nuestras operaciones y servicios para seguir siendo un referente en la industria de la construcción y decoración, siempre manteniendo nuestros valores y ética en cada paso que damos.'},
+        {name: 'Nuestra Experiencia', description: 'Con más de 8 años en el mercado, en CyC Acabados Arquitectónicos hemos acumulado una sólida experiencia en la industria. Durante este tiempo, hemos trabajado en diversos proyectos, desde pequeñas remodelaciones hasta grandes construcciones. Nuestra trayectoria nos ha permitido perfeccionar nuestras habilidades y conocimientos, y nos enorgullecemos de la confianza que nuestros clientes depositan en nosotros.'},
     ]
     const personal = [
         {name: 'name', description: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, arcu augue varius turpis', img: 'imgProduct1', class: 'productoH'},
@@ -21,8 +21,7 @@ export default function About() {
                 <div className="titlePart">
                         <h1 className="titlePart">Sobre Nosotros</h1>
                         <p className="contendPart">
-                            Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
-                            Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+                            Somos una compañía apasionada y comprometida con ofrecer soluciones de alta calidad en el campo de la construcción y decoración. Con años de experiencia en el mercado, nos enorgullecemos de nuestro equipo de expertos en la industria, quienes trabajan arduamente para hacer realidad tus proyectos.
                         </p>
                     </div>
                     <div className={styleAbout.contendPart1}>
@@ -36,6 +35,7 @@ export default function About() {
                         ))}
                     </div>
                 </div>
+                {/*
                 <div className={styleAbout.part2}>
                     <div className="titlePart">
                         <h1 className="titlePart">Nuestro Equipo</h1>
@@ -55,6 +55,7 @@ export default function About() {
                         ))}
                     </div>
                 </div>
+                */}
         </>
     );
 };

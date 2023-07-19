@@ -74,10 +74,9 @@ export default function Store(){
       <>
       <Alert alert={alert} handleClose={toggleAlert}/>
       <div className="titlePart">
-          <h1 className="titlePart">Store</h1>
-          <p className="contendPart">
-              Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
-              Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+          <h1 className="titlePart">Tienda</h1>
+          <p className="contendPart">            
+Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lugar. En nuestra tienda, ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer tus necesidades.
           </p>
       </div>
       <div className={styleStore.contendPart2}>

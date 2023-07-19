@@ -43,14 +43,14 @@
     height: 300px;
 }
 .imgProduct1{
-    background-image: url(../img/servicios/maxresdefault.jpg);
+    background-image: url(../img/servicios/IMG_1960.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
     filter: drop-shadow(-50px 6px 50px rgba(0, 0, 0, 0.25));
 }
 .imgProduct2{
-    background-image: url(../img/servicios/WhatsApp-Image-2021-03-02-at-09.52.31.jpeg);
+    background-image: url(../img/servicios/IMG_1956.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 

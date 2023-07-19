@@ -46,8 +46,7 @@ export default function Contact(){
             <div className="titlePart">
                 <h1 className="titlePart">Contactanos</h1>
                 <p className="contendPart">
-                    Te ayudamos Con La Asesoría y Visualización De Tu Proyecto,
-                    Asesoramiento De Materiales, Acabados y Propuesta De Iluminació
+                    ¡Estamos ansiosos por escucharte! Contáctanos hoy mismo para comenzar a trabajar juntos en tu próximo proyecto de construcción o decoración. Nuestro equipo de expertos estará encantado de brindarte asesoramiento personalizado y soluciones integrales para satisfacer tus necesidades.
                 </p>
             </div>
             <Alert alert={alert} handleClose={toggleAlert}/>

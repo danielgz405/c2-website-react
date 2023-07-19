@@ -48,10 +48,8 @@ export default function Projects(){
             <div>
                 <div className="titlePart">
                     <h1 className="titlePart">Proyectos</h1>
-                    <p className="contendPart">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim 
-                        ligula ac eleifend egestas. Donec pharetra, sapien quis cursus fermentum, 
-                        arcu augue varius turpis,
+                    <p className="contendPart">                     
+                        ¡Descubre nuestros proyectos destacados! Explora nuestra galería de imágenes para conocer algunos de los trabajos que hemos realizado con pasión y dedicación. Cada proyecto es único y refleja nuestra atención al detalle y compromiso con la excelencia en cada paso del camino. Inspírate con nuestras creaciones y déjanos ser parte de tu próximo proyecto. ¡Ven y descubre cómo podemos hacer realidad tus ideas!
                     </p>
                 </div>
                 <div>
