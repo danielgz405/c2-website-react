@@ -9,6 +9,7 @@
 .env
 .database.rules.json
 /firebase
+/src/credentials.js
 
 # testing
 /coverage
