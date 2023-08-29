@@ -76,7 +76,7 @@ export default function Store(){
       <div className="titlePart">
           <h1 className="titlePart">Tienda</h1>
           <p className="contendPart">            
-Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lugar. En nuestra tienda, ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer tus necesidades.
+            Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lugar. En nuestra tienda, ofrecemos una amplia gama de materiales de construcción de alta calidad para satisfacer tus necesidades.
           </p>
       </div>
       <div className={styleStore.contendPart2}>
@@ -94,7 +94,8 @@ Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lug
       </div>
       <div className={styleStore.contendPart2}>
         <div className={styleStore.container}>
-          {products.length > 0 ? 
+          {/*products.length > 0*/}
+          {false ? 
           products.map((product) => (
             <div key={product.id} className={styleStore.itemStore} >
                 <img className={styleStore.imagesOnlyAlt} src={`${product.url}`} alt={product.alt}/>
@@ -110,7 +111,7 @@ Encuentra todo lo que necesitas para tu proyecto de construcción en un solo lug
             className="commingSon-min"
             >
               <InformationCircleIcon className="commingSonIcon"/>
-              <span className="commingSonText">Aun no se han registrado productos </span>
+              <span className="commingSonText">Estamos construyendo algo especial aquí. Próximamente. </span>
             </div>
           </>
           }

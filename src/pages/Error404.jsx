@@ -14,7 +14,7 @@ const Error404 = () => {
       <p className="mt-4 text-base text-white/70 sm:mt-6">Lo siento, no pudimos encontrar la página que estás buscando.</p>
       <div className="mt-10 flex justify-center">
         <Link to="/" className="text-sm font-semibold leading-7 text-white">
-          <span aria-hidden="true">&larr;</span> Regrasa al Home
+          <span aria-hidden="true">&larr;</span> Regresa al Home
         </Link>
       </div>
     </div>
